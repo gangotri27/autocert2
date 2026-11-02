@@ -1,0 +1,25 @@
+{
+  "run_id": "panda_test_003",
+  "strategy": "iso_cube",
+  "pose_set": "standard",
+  "cube_center": [
+    0.4,
+    0.0,
+    0.5
+  ],
+  "cube_size_mm": 60.0,
+  "workspace_bounds": {
+    "x": [
+      0.355,
+      0.445
+    ],
+    "y": [
+      -0.045,
+      0.045
+    ],
+    "z": [
+      0.455,
+      0.545
+    ]
+  }
+}

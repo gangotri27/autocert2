@@ -1,0 +1,313 @@
+\documentclass[a4paper,landscape,10pt]{article}
+
+% ================= PACKAGES ================= %
+\usepackage[table]{xcolor} 
+\usepackage[margin=0.6in]{geometry}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{tabularx}
+\usepackage{helvet} 
+\usepackage{titlesec}
+\usepackage{amssymb}
+\usepackage{enumitem} 
+\usepackage{qrcode}
+\usepackage[hidelinks]{hyperref} 
+
+\renewcommand{\familydefault}{\sfdefault}
+
+% ================= COLORS ================= %
+\definecolor{maincolor}{HTML}{008080}
+\definecolor{rowcolor}{HTML}{E6F2F2}
+\definecolor{white}{HTML}{FFFFFF}
+
+% ================= LAYOUT ================= %
+\setlength{\columnsep}{0.6in}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.3}
+\pagestyle{empty}
+\raggedcolumns
+
+% ================= SECTION STYLE ================= %
+\newcommand{\sectitle}[1]{
+    \vspace{0.4cm}
+    \colorbox{rowcolor}{
+        \parbox{\linewidth}{
+            \textbf{\textcolor{maincolor}{#1}}
+        }
+    }
+    \vspace{0.2cm}
+}
+
+\begin{document}
+
+% ================= HEADER ================= %
+\noindent
+\colorbox{maincolor}{
+    \parbox{\dimexpr\linewidth-2\fboxsep}{
+        \vspace{8pt}
+        
+        % Top row
+        {\color{white}\Large\textbf{OMX-5DOF}} \hfill
+        {\color{white}\small Research System Datasheet}
+        
+        \vspace{2pt}
+        
+        % Bottom row (Model + Revision)
+        {\color{white}\small Model: OMX-5DOF} \hfill
+        {\color{white}\small Rev 1.0 | 2026}
+        
+        \vspace{8pt}
+    }
+}
+\vspace{0.4cm}
+
+\begin{multicols}{3}
+
+% ========================================== %
+% PAGE 1 - COLUMN 1: Image & Pitch
+% ========================================== %
+\begin{center}
+    \includegraphics[width=0.7\linewidth, height=4.5cm, keepaspectratio]{robo_1.png}
+\end{center}
+
+\vspace{0.2cm}
+{\fontsize{26}{28}\selectfont \textbf{OMX-5DOF}} \\
+
+{\large \textcolor{maincolor}{6-DOF Upgraded Edition}}
+
+\bigskip
+\textcolor{maincolor}{\rule{\linewidth}{1pt}}
+\smallskip
+
+5dof configuration
+
+\vfill\null
+\columnbreak
+
+% ========================================== %
+% PAGE 1 - COLUMN 2: Features & Performance
+% ========================================== %
+\sectitle{Key Features}
+\begin{itemize}[leftmargin=*, nosep]
+\item \textit{Not specified}
+\end{itemize}
+
+
+
+\sectitle{Applications}
+\begin{itemize}[leftmargin=*, nosep]
+\item \textit{Not specified}
+\end{itemize}
+
+\sectitle{Performance}
+
+\colorbox{rowcolor}{
+\parbox{\linewidth}{
+\rowcolors{1}{white}{rowcolor}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.45\linewidth} X}
+Max TCP speed & 0.30 m/s \\
+Max joint speed & 275.0$^\circ$/s \\
+Mounting Options & Tabletop or fixed base\\
+Noise Level & < 60 dB(A) \\
+Orientational Accuracy & $\pm$ 0.560 $^\circ$\\
+Positional Accuracy & $\pm$ 0.454 mm\\
+\end{tabularx}
+}
+}
+
+\vfill\null
+\columnbreak
+
+% ========================================== %
+% PAGE 1 - COLUMN 3: General & Joint Specs
+% ========================================== %
+\sectitle{General Specification}
+
+\colorbox{rowcolor}{
+\parbox{\linewidth}{
+\rowcolors{1}{white}{rowcolor}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.42\linewidth} X}
+Payload & 0.3 kg (at max reach) \\
+Reach & 342 mm\\
+Degrees of Freedom & 6 \\
+Configuration & Articulated Manipulator \\
+Repeatability & $\pm$2.697 mm \\
+Footprint & Ø150 mm \\
+\end{tabularx}
+}
+}
+\smallskip
+{\footnotesize *Payload includes end-effector weight. Reach defined as maximum distance from base to TCP.}
+
+\sectitle{Joint Specifications}
+
+\colorbox{rowcolor}{
+\parbox{\linewidth}{
+\rowcolors{1}{white}{rowcolor}
+\begin{tabularx}{\linewidth}{l X X X}
+\textbf{Joint} & \textbf{Working Range} & \textbf{Max Speed} & \textbf{Peak Torque} \\
+Joint1 & $-180^\circ$ to $180^\circ$ & 275$^\circ$/s & 1000.0 Nm \\
+Joint2 & $-86^\circ$ to $86^\circ$ & 275$^\circ$/s & 1000.0 Nm \\
+Joint3 & $-86^\circ$ to $80^\circ$ & 275$^\circ$/s & 1000.0 Nm \\
+Joint4 & $-97^\circ$ to $113^\circ$ & 275$^\circ$/s & 1000.0 Nm \\
+Gripper Left Joint & $-1^\circ$ to $1^\circ$ & 275$^\circ$/s & 1000.0 Nm \\
+Gripper Right Joint & $-1^\circ$ to $1^\circ$ & 275$^\circ$/s & 1000.0 Nm \\
+\end{tabularx}
+}
+}
+\smallskip
+{\footnotesize *Gripper provides additional actuation DOF. Torque values are derived from manufacturer datasheets.}
+
+% ========================================== %
+% ================= PAGE 2 ================= %
+% ========================================== %
+\vfill\null
+\pagebreak
+
+% ========================================== %
+% PAGE 2 - COLUMN 1 (Col 4 overall): Control
+% ========================================== %
+\sectitle{Control System}
+
+\colorbox{rowcolor}{
+\parbox{\linewidth}{
+\rowcolors{1}{white}{rowcolor}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.38\linewidth} X}
+Supported OS & Ubuntu 22.04 / 24.04 \\
+Middleware & ROS 2 (Humble / Jazzy) \\
+Motion Planning & MoveIt 2 (OMPL) \\
+Controller & ros2\_control \\
+Simulation & Gazebo (Ignition) \\
+Programming & Python, C++ APIs \\
+Interface & USB / Serial (via controller) \\
+\end{tabularx}
+}
+}
+
+\sectitle{Actuators}
+
+\colorbox{rowcolor}{
+\parbox{\linewidth}{
+\rowcolors{1}{white}{rowcolor}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.38\linewidth} X}
+Actuator Type & DYNAMIXEL Smart Servo \\
+Motor Models & XM430-W350-T / XL430-W250-T \\
+Control Mode & Position / Velocity / Current \\
+Communication & TTL Multi-Drop Bus \\
+Feedback & Absolute Contactless Encoder \\
+\end{tabularx}
+}
+}
+
+\sectitle{Electrical Specifications}
+
+\colorbox{rowcolor}{
+\parbox{\linewidth}{
+\rowcolors{1}{white}{rowcolor}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.4\linewidth} X}
+Input voltage & 12 V DC \\
+Power supply & 12 V, 5 A adapter \\
+Typical power & 35 W \\
+Maximum power & 120 W (peak load) \\
+Digital I/O & Available via external controller\\
+\end{tabularx}
+}
+}
+
+\vfill\null
+\columnbreak
+
+% ========================================== %
+% PAGE 2 - COLUMN 2 (Col 5 overall): Hardware
+% ========================================== %
+
+\begin{center}
+    \includegraphics[width=0.95\linewidth, height=4.5cm, keepaspectratio]{robo_2.png}
+\end{center}
+\vspace{-0.2cm}
+
+\sectitle{Physical \& Kinematics}
+
+\colorbox{rowcolor}{
+\parbox{\linewidth}{
+\rowcolors{1}{white}{rowcolor}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.35\linewidth} X}
+Materials & High-strength polymer (PLA) + metal fasteners \\
+Cable length & 1 m \\
+Total Weight & $\approx$ 0.63 kg \\
+IP Rating & IP20 \\
+Operating Temp & 0°C to 45°C \\
+Humidity & 5\% to 85\% (non-condensing) \\
+\end{tabularx}
+}
+}
+
+\sectitle{Safety \& Compliance}
+
+\colorbox{rowcolor}{
+\parbox{\linewidth}{
+\rowcolors{1}{white}{rowcolor}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.35\linewidth} X}
+Safety rating & Uncertified (Research use only) \\
+Architecture & Software-limited force/torque feedback (PL-b equivalent) \\
+Protection & Configurable joint, velocity, and torque limits \\
+E-Stop & Software-triggered (external hardware optional) \\
+\end{tabularx}
+}
+}
+
+\vfill\null
+\columnbreak
+
+% ========================================== %
+% PAGE 2 - COLUMN 3 (Col 6 overall): Logistics
+% ========================================== %
+
+\sectitle{Known Limitations}
+\begin{itemize}[leftmargin=*, nosep]
+    \item 0
+    \item Limited stiffness due to 3D-printed PLA structure
+    \item Accuracy subject to standard Dynamixel gear backlash
+\end{itemize}
+
+\sectitle{Documentation \& Resources}
+
+\colorbox{rowcolor}{
+\parbox{\linewidth}{
+\begin{tabularx}{\linewidth}{c X}
+\vspace{2pt} \qrcode[height=2.3cm]{https://github.com/KMTI-ROBOPARADIGM/omx-wrist-roll-original} \vspace{2pt} &
+\textbf{GitHub Repository} \newline
+Access source code, ROS 2 packages, setup guides, and updates. \newline
+{\scriptsize \href{https://github.com/KMTI-ROBOPARADIGM/omx-wrist-roll-original}{github.com/KMTI-ROBOPARADIGM/omx-wrist-roll-original}} \\
+\end{tabularx}
+}
+}
+
+\sectitle{Package Contents}
+
+\begin{itemize}[leftmargin=*, nosep]
+    \item 6-DOF Robotic Arm \& Gripper
+    \item 12V Power Adapter
+    \item Communication Cable
+    \item Mounting Hardware
+    \item Quick start guide / documentation
+\end{itemize}
+
+\sectitle{Contact \& Origin}
+
+\colorbox{rowcolor}{
+\parbox{\linewidth}{
+\rowcolors{1}{white}{rowcolor}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.25\linewidth} X}
+Lab/Entity & \textbf{AutoCert Lab} \\
+Contact & \href{mailto:research@domain.edu}{research@domain.edu} \\
+Location & India\\
+\end{tabularx}
+}
+}
+
+\vfill\null
+\end{multicols}
+
+\end{document}

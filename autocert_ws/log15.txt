@@ -1,0 +1,120 @@
+Script started on 2026-04-07 16:54:24+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+$ ros2 launch autocert_bringup full_pipeline.launch.py   urdf_file:=/home/ubuntu/new_ws/src/open_manipulator/open_manipulator_description/urdf/open_manipulator_x/open_manipulator_x.urdf.xacro   srdf_file:=/home/ubuntu/new_ws/src/open_manipulator/open_manipulator_moveit_config/config/open_manipulator_x/open_manipulator_x.srdf   planning_group:=arm   end_effector_link:=wrist_roll_link   reference_frame:=link1   planner_id:=RRTConnect   planning_time:=5.0
+
+[INFO] [launch]: All log files can be found below /home/ubuntu/.ros/log/2026-04-07-16-54-26-585864-c182b1819e36-22496
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [robot_state_publisher-1]: process started with pid [22508]
+[INFO] [move_group-2]: process started with pid [22509]
+[robot_state_publisher-1] [INFO] [1775580867.580500530] [robot_state_publisher]: Robot initialized
+[move_group-2] [INFO] [1775580867.710906335] [move_group.moveit.moveit.ros.rdf_loader]: Loaded robot model in 0.0132798 seconds
+[move_group-2] [INFO] [1775580867.711593800] [move_group.moveit.moveit.core.robot_model]: Loading robot model 'open_manipulator_x'...
+[move_group-2] [INFO] [1775580867.711807362] [move_group.moveit.moveit.core.robot_model]: No root/virtual joint specified in SRDF. Assuming fixed joint
+[move_group-2] [WARN] [1775580867.948599207] [move_group.moveit.moveit.core.robot_model]: Link end_effector_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.
+[move_group-2] [WARN] [1775580867.959588989] [move_group.moveit.moveit.core.robot_model]: Could not identify parent group for end-effector 'end_effector'
+[move_group-2] [INFO] [1775580867.977906874] [move_group.moveit.moveit.kinematics.kdl_kinematics_plugin]: Joint weights for group 'arm': 1 1 1 1 1
+[move_group-2] [INFO] [1775580868.854813780] [move_group.moveit.moveit.ros.moveit_cpp]: Listening to 'joint_states' for joint states
+[move_group-2] [INFO] [1775580868.860269572] [move_group.moveit.moveit.ros.current_state_monitor]: Listening to joint states on topic 'joint_states'
+[move_group-2] [INFO] [1775580868.883348432] [move_group.moveit.moveit.ros.planning_scene_monitor]: Listening to '/attached_collision_object' for attached collision objects
+[move_group-2] [INFO] [1775580868.886864213] [move_group.moveit.moveit.ros.planning_scene_monitor]: Publishing maintained planning scene on 'monitored_planning_scene'
+[move_group-2] [INFO] [1775580868.887842496] [move_group.moveit.moveit.ros.planning_scene_monitor]: Starting planning scene monitor
+[move_group-2] [INFO] [1775580868.889200205] [move_group.moveit.moveit.ros.planning_scene_monitor]: Listening to '/planning_scene'
+[move_group-2] [INFO] [1775580868.889310286] [move_group.moveit.moveit.ros.planning_scene_monitor]: Starting world geometry update monitor for collision objects, attached objects, octomap updates.
+[move_group-2] [INFO] [1775580868.890408736] [move_group.moveit.moveit.ros.planning_scene_monitor]: Listening to 'collision_object'
+[move_group-2] [INFO] [1775580868.891682468] [move_group.moveit.moveit.ros.planning_scene_monitor]: Listening to 'planning_scene_world' for planning scene world geometry
+[move_group-2] [WARN] [1775580868.894970632] [move_group.moveit.moveit.ros.occupancy_map_monitor]: Resolution not specified for Octomap. Assuming resolution = 0.1 instead
+[move_group-2] [ERROR] [1775580868.895128274] [move_group.moveit.moveit.ros.occupancy_map_monitor]: No 3D sensor plugin(s) defined for octomap updates
+[move_group-2] terminate called after throwing an instance of 'std::runtime_error'
+[move_group-2]   what():  Planning plugin name is empty or not defined in namespace 'ompl'. Please choose one of the available plugins: chomp_interface/CHOMPPlanner, ompl_interface/OMPLPlanner, pilz_industrial_motion_planner/CommandPlanner, stomp_moveit/StompPlanner
+[move_group-2] Stack trace (most recent call last):
+[move_group-2] #16   Object "", at 0xffffffffffffffff, in 
+[move_group-2] #15   Object "/opt/ros/jazzy/lib/moveit_ros_move_group/move_group", at 0x5eacdad47a44, in _start
+[move_group-2] #14   Source "../csu/libc-start.c", line 360, in __libc_start_main_impl [0x7f9a91b2028a]
+[move_group-2] #13   Source "../sysdeps/nptl/libc_start_call_main.h", line 58, in __libc_start_call_main [0x7f9a91b201c9]
+[move_group-2] #12   Object "/opt/ros/jazzy/lib/moveit_ros_move_group/move_group", at 0x5eacdad46162, in main
+[move_group-2] #11   Object "/opt/ros/jazzy/lib/libmoveit_cpp.so.2.12.4", at 0x7f9a92498b6e, in moveit_cpp::MoveItCpp::MoveItCpp(std::shared_ptr<rclcpp::Node> const&, moveit_cpp::MoveItCpp::Options const&)
+[move_group-2] #10   Object "/opt/ros/jazzy/lib/libmoveit_cpp.so.2.12.4", at 0x7f9a92493d07, in moveit_cpp::MoveItCpp::loadPlanningPipelines(moveit_cpp::MoveItCpp::PlanningPipelineOptions const&)
+[move_group-2] #9    Object "/opt/ros/jazzy/lib/libmoveit_planning_pipeline_interfaces.so.2.12.4", at 0x7f9a918a186e, in moveit::planning_pipeline_interfaces::createPlanningPipelineMap(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, std::shared_ptr<moveit::core::RobotModel const> const&, std::shared_ptr<rclcpp::Node> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+[move_group-2] #8    Object "/opt/ros/jazzy/lib/libmoveit_planning_pipeline.so.2.12.4", at 0x7f9a9176f1bf, in planning_pipeline::PlanningPipeline::PlanningPipeline(std::shared_ptr<moveit::core::RobotModel const> const&, std::shared_ptr<rclcpp::Node> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+[move_group-2] #7    Object "/opt/ros/jazzy/lib/libmoveit_planning_pipeline.so.2.12.4", at 0x7f9a9176dc61, in planning_pipeline::PlanningPipeline::configure()
+[move_group-2] #6    Object "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33", at 0x7f9a91df3390, in __cxa_throw
+[move_group-2] #5    Object "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33", at 0x7f9a91ddda54, in std::terminate()
+[move_group-2] #4    Object "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33", at 0x7f9a91df30d9, in 
+[move_group-2] #3    Object "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33", at 0x7f9a91dddff4, in 
+[move_group-2] #2    Source "./stdlib/abort.c", line 79, in abort [0x7f9a91b1e8fe]
+[move_group-2] #1    Source "../sysdeps/posix/raise.c", line 26, in raise [0x7f9a91b3b27d]
+[move_group-2] #0  | Source "./nptl/pthread_kill.c", line 89, in __pthread_kill_internal
+[move_group-2]     | Source "./nptl/pthread_kill.c", line 78, in __pthread_kill_implementation
+[move_group-2]       Source "./nptl/pthread_kill.c", line 44, in __pthread_kill [0x7f9a91b94b2c]
+[move_group-2] Aborted (Signal sent by tkill() 22509 1000)
+[ERROR] [move_group-2]: process has died [pid 22509, exit code -6, cmd '/opt/ros/jazzy/lib/moveit_ros_move_group/move_group --ros-args --params-file /tmp/launch_params_xx1ki7y4 --params-file /tmp/launch_params_ey2kt2l3 --params-file /tmp/launch_params_aj1fpf0z --params-file /tmp/ompl_pipeline_l1pukz37.yaml --params-file /tmp/launch_params_o542xeht --params-file /tmp/launch_params_hph5o9xe'].
+[INFO] [execution_node-3]: process started with pid [22551]
+[execution_node-3] Traceback (most recent call last):
+[execution_node-3]   File "/home/ubuntu/autocert_ws/install/autocert_execution/lib/autocert_execution/execution_node", line 33, in <module>
+[execution_node-3]     sys.exit(load_entry_point('autocert-execution', 'console_scripts', 'execution_node')())
+[execution_node-3]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[execution_node-3]   File "/home/ubuntu/autocert_ws/build/autocert_execution/autocert_execution/execution_node.py", line 306, in main
+[execution_node-3]     execution_node = ExecutionNode()
+[execution_node-3]                      ^^^^^^^^^^^^^^^
+[execution_node-3]   File "/home/ubuntu/autocert_ws/build/autocert_execution/autocert_execution/execution_node.py", line 39, in __init__
+[execution_node-3]     self.declare_parameter('planning_group', 'arm')
+[execution_node-3]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/node.py", line 389, in declare_parameter
+[execution_node-3]     return self.declare_parameters('', [args], ignore_override)[0]
+[execution_node-3]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[execution_node-3]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/node.py", line 524, in declare_parameters
+[execution_node-3]     raise ParameterAlreadyDeclaredException(parameters_already_declared)
+[execution_node-3] rclpy.exceptions.ParameterAlreadyDeclaredException: Parameter(s) already declared: ['planning_group']
+[ERROR] [execution_node-3]: process has died [pid 22551, exit code 1, cmd '/home/ubuntu/autocert_ws/install/autocert_execution/lib/autocert_execution/execution_node --ros-args -r __node:=execution_node --params-file /home/ubuntu/autocert_ws/install/autocert_execution/share/autocert_execution/config/execution_params.yaml --params-file /tmp/robot_desc_3g5vm8on.yaml --params-file /tmp/launch_params_suq99pah'].
+[INFO] [experiment_node-4]: process started with pid [22586]
+[experiment_node-4] /home/ubuntu/.local/lib/python3.12/site-packages/pandas/core/computation/expressions.py:22: UserWarning: Pandas requires version '2.10.2' or newer of 'numexpr' (version '2.9.0' currently installed).
+[experiment_node-4]   from pandas.core.computation.check import NUMEXPR_INSTALLED
+[experiment_node-4] /home/ubuntu/.local/lib/python3.12/site-packages/pandas/core/arrays/masked.py:56: UserWarning: Pandas requires version '1.4.2' or newer of 'bottleneck' (version '1.3.5' currently installed).
+[experiment_node-4]   from pandas.core import (
+[experiment_node-4] [INFO] [1775580895.115531326] [experiment_node]: ExperimentNode initialized
+[experiment_node-4]   Motion mode : MoveIt2 planner-based (no direct IK)
+[experiment_node-4]   Max retries : 2
+[experiment_node-4] [INFO] [1775580895.122469914] [experiment_node]: Workspace bounds: x=[0.05, 0.4]  y=[-0.25, 0.25]  z=[0.05, 0.45]
+[experiment_node-4] [INFO] [1775580895.123994610] [experiment_node]: Robot parameters (from launch args):
+[experiment_node-4]   planning_group    : arm
+[experiment_node-4]   end_effector_link : wrist_roll_link
+[experiment_node-4]   reference_frame   : link1
+[experiment_node-4]   planner_id        : RRTConnect
+[experiment_node-4]   planning_time     : 5.0s
+[experiment_node-4] [INFO] [1775580895.165475496] [experiment_node]: MoveItAdapter initialized
+[experiment_node-4]   Group  : arm
+[experiment_node-4]   EE Link: wrist_roll_link
+[experiment_node-4]   Frame  : link1
+[experiment_node-4] [INFO] [1775580895.166789630] [experiment_node]: Waiting for /move_to_pose action server...
+[experiment_node-4] [INFO] [1775580896.193287067] [experiment_node]: Still waiting for action server...
+[experiment_node-4] [INFO] [1775580897.224863921] [experiment_node]: Still waiting for action server...
+[experiment_node-4] [INFO] [1775580898.274306825] [experiment_node]: Still waiting for action server...
+[experiment_node-4] [INFO] [1775580899.336845415] [experiment_node]: Still waiting for action server...
+[experiment_node-4] [INFO] [1775580900.403485456] [experiment_node]: Still waiting for action server...
+[experiment_node-4] [INFO] [1775580901.442035728] [experiment_node]: Still waiting for action server...
+[experiment_node-4] [INFO] [1775580902.500184310] [experiment_node]: Still waiting for action server...
+[experiment_node-4] [INFO] [1775580903.542727350] [experiment_node]: Still waiting for action server...
+[experiment_node-4] [INFO] [1775580904.612778529] [experiment_node]: Still waiting for action server...
+[experiment_node-4] [INFO] [1775580905.636560617] [experiment_node]: Still waiting for action server...
+[experiment_node-4] [INFO] [1775580904.754667834] [experiment_node]: Still waiting for action server...
+^C[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[experiment_node-4] Traceback (most recent call last):
+[experiment_node-4]   File "/home/ubuntu/autocert_ws/install/autocert_experiment/lib/autocert_experiment/experiment_node", line 33, in <module>
+[experiment_node-4]     sys.exit(load_entry_point('autocert-experiment', 'console_scripts', 'experiment_node')())
+[experiment_node-4]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[experiment_node-4]   File "/home/ubuntu/autocert_ws/build/autocert_experiment/autocert_experiment/experiment_node.py", line 539, in main
+[experiment_node-4]     success = node.run(
+[experiment_node-4]               ^^^^^^^^^
+[experiment_node-4]   File "/home/ubuntu/autocert_ws/build/autocert_experiment/autocert_experiment/experiment_node.py", line 313, in run
+[robot_state_publisher-1] [INFO] [1775580905.784229925] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[experiment_node-4]     if not adapter.connect():
+[experiment_node-4]            ^^^^^^^^^^^^^^^^^
+[experiment_node-4]   File "/home/ubuntu/autocert_ws/build/autocert_experiment/autocert_experiment/robot_adapter/moveit_adapter.py", line 99, in connect
+[experiment_node-4]     while not self._action_client.wait_for_server(timeout_sec=1.0):
+[experiment_node-4]               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[experiment_node-4]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/action/client.py", line 600, in wait_for_server
+[experiment_node-4]     time.sleep(sleep_time)
+[experiment_node-4] KeyboardInterrupt
+[INFO] [robot_state_publisher-1]: process has finished cleanly [pid 22508]
+[ERROR] [experiment_node-4]: process has died [pid 22586, exit code -2, cmd '/home/ubuntu/autocert_ws/install/autocert_experiment/lib/autocert_experiment/experiment_node --config /home/ubuntu/autocert_ws/install/autocert_experiment/share/autocert_experiment/config/experiment_config.yaml --output --run-id run_001 --ros-args -r __node:=experiment_node --params-file /tmp/launch_params_kyaayyg3'].
+$ exit
+
+Script done on 2026-04-07 16:58:52+00:00 [COMMAND_EXIT_CODE="0"]

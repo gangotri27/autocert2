@@ -1,0 +1,119 @@
+{
+    "metadata": {
+        "certificate_id": "AC-RUN_001",
+        "issue_date": "2026-04-11",
+        "valid_until": "2027-04-11",
+        "standard": "ISO 9283:1998",
+        "laboratory": "AutoCert Lab",
+        "technician": "AutoCert System",
+        "dataset_hash": "SIM_VALIDATED",
+        "robot_model_hash": "OMX_6DOF",
+        "srdf_hash": "N/A",
+        "controller_version": "ROS2_JAZZY",
+        "issues": [
+            "Max repeatability 2.824mm exceeds limit 0.100mm"
+        ]
+    },
+    "robot": {
+        "manufacturer": "ROBOTIS",
+        "model": "OMX-6DOF-R1",
+        "serial_number": "OMX-DEMO-001",
+        "software_version": "1.0",
+        "payload_kg": 0.3,
+        "reach_m": 0.37
+    },
+    "test_conditions": {
+        "ambient_temperature_c": 22.5,
+        "relative_humidity_percent": 45,
+        "measurement_system": "Leica AT960",
+        "measurement_system_calibration_date": "2024-01-15",
+        "test_cube_size_mm": 60.0,
+        "test_cube_center": [
+            0.2,
+            0.0,
+            0.22
+        ],
+        "repetitions_per_pose": 5,
+        "outlier_threshold": 3.0,
+        "confidence_level": 0.95,
+        "pose_strategy": "iso_cube"
+    },
+    "pose_results": [
+        {
+            "pose_id": 0,
+            "pose_label": "P0",
+            "accuracy_mm": 0.4341511222498897,
+            "repeatability_mm": 1.2883171923765504,
+            "accuracy_x_mm": 0,
+            "accuracy_y_mm": 0,
+            "accuracy_z_mm": 0,
+            "orientation_error_deg": 0.9440085200583268,
+            "orientation_repeatability_deg": 1.4051635972554006,
+            "num_samples": 5,
+            "outliers_removed": 0
+        },
+        {
+            "pose_id": 1,
+            "pose_label": "P1",
+            "accuracy_mm": 0.6609595038992712,
+            "repeatability_mm": 1.7382316411178242,
+            "accuracy_x_mm": 0,
+            "accuracy_y_mm": 0,
+            "accuracy_z_mm": 0,
+            "orientation_error_deg": 0.755048711089626,
+            "orientation_repeatability_deg": 1.5021765105683709,
+            "num_samples": 5,
+            "outliers_removed": 0
+        },
+        {
+            "pose_id": 2,
+            "pose_label": "P2",
+            "accuracy_mm": 0.5007819332236584,
+            "repeatability_mm": 2.6328917469803645,
+            "accuracy_x_mm": 0,
+            "accuracy_y_mm": 0,
+            "accuracy_z_mm": 0,
+            "orientation_error_deg": 0.76345316469172,
+            "orientation_repeatability_deg": 2.4123730239253307,
+            "num_samples": 5,
+            "outliers_removed": 0
+        },
+        {
+            "pose_id": 3,
+            "pose_label": "P3",
+            "accuracy_mm": 0.5247370963377228,
+            "repeatability_mm": 2.823912679925873,
+            "accuracy_x_mm": 0,
+            "accuracy_y_mm": 0,
+            "accuracy_z_mm": 0,
+            "orientation_error_deg": 0.33366386935571224,
+            "orientation_repeatability_deg": 1.1366853401448498,
+            "num_samples": 5,
+            "outliers_removed": 0
+        },
+        {
+            "pose_id": 4,
+            "pose_label": "P4",
+            "accuracy_mm": 0.5412716159838407,
+            "repeatability_mm": 2.5798593104793084,
+            "accuracy_x_mm": 0,
+            "accuracy_y_mm": 0,
+            "accuracy_z_mm": 0,
+            "orientation_error_deg": 0.9139680641312304,
+            "orientation_repeatability_deg": 1.418877555275758,
+            "num_samples": 5,
+            "outliers_removed": 0
+        }
+    ],
+    "overall": {
+        "mean_accuracy_mm": 0.5323802543388766,
+        "max_accuracy_mm": 0.6609595038992712,
+        "mean_repeatability_mm": 2.2126425141759842,
+        "max_repeatability_mm": 2.823912679925873,
+        "mean_orientation_accuracy_deg": 0.7420284658653232,
+        "mean_orientation_repeatability_deg": 1.5750552054339422,
+        "accuracy_95_confidence_mm": 0.05,
+        "repeatability_95_confidence_mm": 0.02,
+        "certification_status": "FAIL"
+    }
+}

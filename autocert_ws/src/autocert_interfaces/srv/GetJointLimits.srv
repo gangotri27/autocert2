@@ -1,0 +1,11 @@
+# Get joint limits request
+string planning_group
+---
+string[] joint_names
+float64[] min_limits
+float64[] max_limits
+float64[] velocity_limits
+float64[] acceleration_limits
+string planning_group
+string end_effector_link
+int32 num_joints

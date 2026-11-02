@@ -1,0 +1,60 @@
+# AutoCert Experiment Configuration — ISO 9283
+#
+# IMPORTANT: This file controls ONLY experiment-specific settings.
+#
+# Robot-specific settings (planning_group, end_effector_link, reference_frame,
+# planner_id, planning_time, velocity_scaling, acceleration_scaling) are
+# intentionally NOT here. They are passed exclusively via launch arguments.
+
+# ── Pose generation strategy ──────────────────────────────────────────────────
+strategy: iso_cube                     # iso_cube | workspace_sampler
+
+# ISO cube geometry
+# cube_center (0.20, 0.0, 0.22) in link1 frame is the verified reachable point
+# for open_manipulator_x.  Planning succeeds here consistently after the
+# kinematics solver timeout fix (0.5 s, was 0.1 s).
+#
+# cube_size_mm: 25 mm → poses at ±12.5 mm from center.
+# All 5 standard poses remain comfortably within the arm's workspace.
+cube_size_mm: 25                       # half-edge in mm — poses at ±12.5 mm from center
+cube_center: [0.20, 0.0, 0.22]        # [x, y, z] metres — verified reachable for OMX
+pose_set: standard                     # standard(5) | extended(7) | full(27)
+
+# Use identity quaternion [0, 0, 0, 1] — EE pointing forward.
+# For open_manipulator_x with wrist_roll_link as EE, this is achievable
+# across the arm's workspace. Other orientations may not be reachable with
+# only 4 DOF (under-constrained for arbitrary 6-DOF targets).
+fixed_orientation: [0.0, 0.0, 0.0, 1.0]
+
+# Workspace sampler parameters (used when strategy: workspace_sampler)
+num_samples: 1000
+sampling_strategy: latin               # random | latin | halton | grid
+
+# ── Experiment timing ─────────────────────────────────────────────────────────
+repetitions_per_pose: 5                # ISO 9283 requires >= 30 for certification
+
+# settling_time_s: 1.5 s
+# After execution_node reports success, the simulation fallback has already:
+#   (a) Published joint states 20× over 1.0 s
+#   (b) Waited 0.2 s for TF propagation inside the execution callback
+# The additional 1.5 s settling time gives extra margin on slower machines
+# before robot_state_publisher's TF transforms are queried.
+settling_time_s: 1.5
+
+measurement_timeout_s: 30.0            # max wait for action result
+
+# ── Workspace safety bounds (metres) ─────────────────────────────────────────
+# Poses outside these bounds are filtered BEFORE being sent to MoveIt.
+# open_manipulator_x: total reach ~380 mm from link1 origin.
+# Tightened to exclude singularity-prone zones near the robot base.
+workspace_bounds:
+  x: [0.10, 0.35]    # min 100 mm forward to avoid near-singular configs
+  y: [-0.20, 0.20]   # ±200 mm lateral
+  z: [0.05, 0.40]    # 50 mm above base to 400 mm height
+
+# ── Motion execution options ──────────────────────────────────────────────────
+random_backoff: true
+backoff_range_m: 0.05
+backoff_attempts: 3
+
+

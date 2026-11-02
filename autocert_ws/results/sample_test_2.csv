@@ -1,0 +1,2 @@
+pose_id,repetition,timestamp,cmd_x,cmd_y,cmd_z,cmd_qx,cmd_qy,cmd_qz,cmd_qw,meas_x,meas_y,meas_z,meas_qx,meas_qy,meas_qz,meas_qw,measurement_system,measurement_quality
+0,1,5902.32,0.2,0.0,0.22,0.0,0.0,0.0,1.0,0.21617216070173617,-0.0041502711434940305,0.20883695461028837,-0.0012250929188678717,-0.12055296730307916,-0.010087955814586626,0.9926548818039661,sim_burst_average,1.0

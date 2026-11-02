@@ -1,0 +1,25 @@
+{
+  "run_id": "run_3000",
+  "strategy": "iso_cube",
+  "pose_set": "standard",
+  "cube_center": [
+    0.2,
+    0.0,
+    0.22
+  ],
+  "cube_size_mm": 25.0,
+  "workspace_bounds": {
+    "x": [
+      0.1,
+      0.35
+    ],
+    "y": [
+      -0.2,
+      0.2
+    ],
+    "z": [
+      0.05,
+      0.4
+    ]
+  }
+}

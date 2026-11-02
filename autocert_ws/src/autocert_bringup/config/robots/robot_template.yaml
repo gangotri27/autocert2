@@ -1,0 +1,41 @@
+# ────────────────────────────────────────────────────────────────────────────
+# Robot Configuration Template for AutoCert
+# Copy this file and rename to <robot_name>.yaml
+# Fill in all fields — do not leave defaults if they don't apply to your robot
+# ────────────────────────────────────────────────────────────────────────────
+
+robot_name: my_robot
+
+# ── Model files ──────────────────────────────────────────────────────────────
+urdf_file: /path/to/my_robot.urdf
+srdf_file: /path/to/my_robot.srdf
+# xacro_args: "use_gazebo:=true"     # uncomment if using xacro
+
+# ── MoveIt planning ───────────────────────────────────────────────────────────
+planning_group: arm                   # MUST match SRDF group name
+end_effector_link: tool0              # MUST match URDF link name
+reference_frame: base_link            # Robot base frame
+
+# ── Planner ───────────────────────────────────────────────────────────────────
+planner_id: RRTConnect                # RRTConnect, RRT, RRTstar, PRM
+planning_time: 5.0
+velocity_scaling: 0.3
+acceleration_scaling: 0.3
+
+# ── ISO 9283 test cube ────────────────────────────────────────────────────────
+cube_center: [0.35, 0.0, 0.35]        # meters [x, y, z] in reference_frame
+cube_size_mm: 50
+pose_set: standard                     # standard(5), extended(7), full(27)
+
+# ── ISO experiment parameters ─────────────────────────────────────────────────
+repetitions_per_pose: 30              # ISO 9283 minimum
+settling_time_s: 2.0
+measurement_timeout_s: 30.0
+
+# ── Certification metadata ────────────────────────────────────────────────────
+manufacturer: Unknown
+model: my_robot
+serial_number: N/A
+software_version: "1.0"
+payload_kg: 1.0
+reach_m: 0.5

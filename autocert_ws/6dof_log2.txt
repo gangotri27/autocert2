@@ -1,0 +1,71 @@
+Script started on 2026-07-06 16:40:33+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+$ ./run_autocert_pipeline.sh   urdf_file:=/home/ubuntu/omx_ws/src/open_manipulator/open_manipulator_description/urdf/open_manipulator_x/open_manipulator_x.urdf.xacro   srdf_file:=/home/ubuntu/omx_ws/src/open_manipulator/open_manipulator_moveit_config/config/open_manipulator_x/open_manipulator_x.srdf   planning_group:=arm end_effector_link:=end_effector_link reference_frame:=link1   planner_id:=RRTConnect planning_time:=5.0 run_id:=run_2005 robot_mode:=simulation^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D^[[D============================================================
+ AutoCert pipeline — run_id: run_2005
+ Stage 1/2 (ros2 launch): experiment_node -> evaluation_node
+============================================================
+[INFO] [launch]: All log files can be found below /home/ubuntu/.ros/log/2026-07-06-16-40-48-968547-c182b1819e36-3659
+[INFO] [launch]: Default logging verbosity is set to INFO
+[full_pipeline] using SRDF group_state as joint_state_publisher zeros for group "arm": {'joint1': 0.0, 'joint2': -1.0, 'joint3': 0.7, 'joint4': 0.3}
+[INFO] [robot_state_publisher-1]: process started with pid [3662]
+[INFO] [static_transform_publisher-2]: process started with pid [3663]
+[INFO] [execution_node-3]: process started with pid [3664]
+[static_transform_publisher-2] [WARN] [1783356049.448251832] []: Old-style arguments are deprecated; see --help for new-style arguments
+[static_transform_publisher-2] [INFO] [1783356049.521611700] [world_to_reference_frame_static_tf]: Spinning until stopped - publishing transform
+[static_transform_publisher-2] translation: ('0.000000', '0.000000', '0.000000')
+[static_transform_publisher-2] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-2] from 'world' to 'link1'
+[robot_state_publisher-1] [INFO] [1783356049.546053304] [robot_state_publisher]: Robot initialized
+^C[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[robot_state_publisher-1] [INFO] [1783356050.164795712] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[static_transform_publisher-2] [INFO] [1783356050.164788470] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[execution_node-3] Traceback (most recent call last):
+[execution_node-3]   File "/home/ubuntu/autocert_ws/install/autocert_execution/lib/autocert_execution/execution_node", line 33, in <module>
+[execution_node-3]     sys.exit(load_entry_point('autocert-execution', 'console_scripts', 'execution_node')())
+[execution_node-3]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[execution_node-3]   File "/home/ubuntu/autocert_ws/install/autocert_execution/lib/autocert_execution/execution_node", line 25, in importlib_load_entry_point
+[execution_node-3]     return next(matches).load()
+[execution_node-3]            ^^^^^^^^^^^^^^^^^^^^
+[execution_node-3]   File "/usr/lib/python3.12/importlib/metadata/__init__.py", line 205, in load
+[execution_node-3]     module = import_module(match.group('module'))
+[execution_node-3]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[execution_node-3]   File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+[execution_node-3]     return _bootstrap._gcd_import(name[level:], package, level)
+[execution_node-3]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[execution_node-3]   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+[execution_node-3]   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+[execution_node-3]   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+[execution_node-3]   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+[execution_node-3]   File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+[execution_node-3]   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+[execution_node-3]   File "/home/ubuntu/autocert_ws/build/autocert_execution/autocert_execution/execution_node.py", line 14, in <module>
+[execution_node-3]     from rclpy.node import Node
+[execution_node-3]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/node.py", line 47, in <module>
+[execution_node-3]     from rclpy.client import Client
+[execution_node-3]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/client.py", line 25, in <module>
+[execution_node-3]     from rclpy.qos import QoSProfile
+[execution_node-3] KeyboardInterrupt
+[ERROR] [execution_node-3]: process has died [pid 3664, exit code -2, cmd '/home/ubuntu/autocert_ws/install/autocert_execution/lib/autocert_execution/execution_node --ros-args -r __node:=execution_node --params-file /tmp/autocert_v63oalyt.yaml'].
+[INFO] [static_transform_publisher-2]: process has finished cleanly [pid 3663]
+[INFO] [robot_state_publisher-1]: process has finished cleanly [pid 3662]
+
+============================================================
+ Stage 2/2 (plain foreground process): certification_node
+ This step can prompt you interactively for any metadata
+ field missing from: /home/ubuntu/autocert_ws/install/autocert_certification/share/autocert_certification/config/robot_metadata.yaml
+============================================================
+^CTraceback (most recent call last):
+  File "/home/ubuntu/autocert_ws/install/autocert_certification/lib/autocert_certification/certification_node", line 3, in <module>
+    import re
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "<frozen importlib._bootstrap_external>", line 1528, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 1502, in _get_spec
+  File "<frozen importlib._bootstrap_external>", line 1605, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 1648, in _fill_cache
+KeyboardInterrupt
+[ros2run]: Interrupt
+$ ^C
+$ 
+
+Script done on 2026-07-06 16:40:54+00:00 [COMMAND_EXIT_CODE="130"]

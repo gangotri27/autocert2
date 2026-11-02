@@ -1,0 +1,463 @@
+Script started on 2026-04-07 13:58:23+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+$ ros2 launch autocert_bringup full_pipeline.launch.py \
+  urdf_file:=/home/ubuntu/new_ws/src/open_manipulator/open_manipulator_description/urdf/open_manipulator_x/open_manipulator_x.urdf.xacro \
+  srdf_file:=/home/ubuntu/new_ws/src/open_manipulator/op> en_manipulator_moveit_config/config/open_manipulator_x/open_manipulator_x.srdf \
+>   planning_group:=arm \
+  end_effector_link:=wrist_roll_link \
+  reference_frame:=link1 \
+  planner_id:=RRTConnect \
+  planning_time:=5.0> > > > > 
+[INFO] [launch]: All log files can be found below /home/ubuntu/.ros/log/2026-04-07-13-58-59-520324-c182b1819e36-15347
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [robot_state_publisher-1]: process started with pid [15351]
+[INFO] [move_group-2]: process started with pid [15352]
+[robot_state_publisher-1] [INFO] [1775570339.633036429] [robot_state_publisher]: Robot initialized
+[move_group-2] [WARN] [1775570339.768938562] [move_group]: Using default pipeline 'ompl'
+[move_group-2] [INFO] [1775570339.783075383] [move_group.moveit.moveit.ros.rdf_loader]: Loaded robot model in 0.0135675 seconds
+[move_group-2] [INFO] [1775570339.783369828] [move_group.moveit.moveit.core.robot_model]: Loading robot model 'open_manipulator_x'...
+[move_group-2] [INFO] [1775570339.783409596] [move_group.moveit.moveit.core.robot_model]: No root/virtual joint specified in SRDF. Assuming fixed joint
+[move_group-2] [WARN] [1775570340.004961106] [move_group.moveit.moveit.core.robot_model]: Link end_effector_link has visual geometry but no collision geometry. Collision geometry will be left empty. Fix your URDF file by explicitly specifying collision geometry.
+[move_group-2] [WARN] [1775570340.016803788] [move_group.moveit.moveit.core.robot_model]: Could not identify parent group for end-effector 'end_effector'
+[move_group-2] [INFO] [1775570340.035631145] [move_group.moveit.moveit.kinematics.kdl_kinematics_plugin]: Joint weights for group 'arm': 1 1 1 1 1
+[move_group-2] [INFO] [1775570340.829231440] [move_group.moveit.moveit.ros.moveit_cpp]: Listening to 'joint_states' for joint states
+[move_group-2] [INFO] [1775570340.834157588] [move_group.moveit.moveit.ros.current_state_monitor]: Listening to joint states on topic 'joint_states'
+[move_group-2] [INFO] [1775570340.856000038] [move_group.moveit.moveit.ros.planning_scene_monitor]: Listening to '/attached_collision_object' for attached collision objects
+[move_group-2] [INFO] [1775570340.859471235] [move_group.moveit.moveit.ros.planning_scene_monitor]: Publishing maintained planning scene on 'monitored_planning_scene'
+[move_group-2] [INFO] [1775570340.860097735] [move_group.moveit.moveit.ros.planning_scene_monitor]: Starting planning scene monitor
+[move_group-2] [INFO] [1775570340.861528032] [move_group.moveit.moveit.ros.planning_scene_monitor]: Listening to '/planning_scene'
+[move_group-2] [INFO] [1775570340.861639172] [move_group.moveit.moveit.ros.planning_scene_monitor]: Starting world geometry update monitor for collision objects, attached objects, octomap updates.
+[move_group-2] [INFO] [1775570340.862792327] [move_group.moveit.moveit.ros.planning_scene_monitor]: Listening to 'collision_object'
+[move_group-2] [INFO] [1775570340.863958831] [move_group.moveit.moveit.ros.planning_scene_monitor]: Listening to 'planning_scene_world' for planning scene world geometry
+[move_group-2] [WARN] [1775570340.867072494] [move_group.moveit.moveit.ros.occupancy_map_monitor]: Resolution not specified for Octomap. Assuming resolution = 0.1 instead
+[move_group-2] [ERROR] [1775570340.867221910] [move_group.moveit.moveit.ros.occupancy_map_monitor]: No 3D sensor plugin(s) defined for octomap updates
+[move_group-2] terminate called after throwing an instance of 'std::runtime_error'
+[move_group-2]   what():  Planning plugin name is empty or not defined in namespace 'ompl'. Please choose one of the available plugins: chomp_interface/CHOMPPlanner, ompl_interface/OMPLPlanner, pilz_industrial_motion_planner/CommandPlanner, stomp_moveit/StompPlanner
+[move_group-2] Stack trace (most recent call last):
+[move_group-2] #16   Object "", at 0xffffffffffffffff, in 
+[move_group-2] #15   Object "/opt/ros/jazzy/lib/moveit_ros_move_group/move_group", at 0x5ec13d2dfa44, in _start
+[move_group-2] #14   Source "../csu/libc-start.c", line 360, in __libc_start_main_impl [0x7388aa8ea28a]
+[move_group-2] #13   Source "../sysdeps/nptl/libc_start_call_main.h", line 58, in __libc_start_call_main [0x7388aa8ea1c9]
+[move_group-2] #12   Object "/opt/ros/jazzy/lib/moveit_ros_move_group/move_group", at 0x5ec13d2de162, in main
+[move_group-2] #11   Object "/opt/ros/jazzy/lib/libmoveit_cpp.so.2.12.4", at 0x7388ab262b6e, in moveit_cpp::MoveItCpp::MoveItCpp(std::shared_ptr<rclcpp::Node> const&, moveit_cpp::MoveItCpp::Options const&)
+[move_group-2] #10   Object "/opt/ros/jazzy/lib/libmoveit_cpp.so.2.12.4", at 0x7388ab25dd07, in moveit_cpp::MoveItCpp::loadPlanningPipelines(moveit_cpp::MoveItCpp::PlanningPipelineOptions const&)
+[move_group-2] #9    Object "/opt/ros/jazzy/lib/libmoveit_planning_pipeline_interfaces.so.2.12.4", at 0x7388aa66b86e, in moveit::planning_pipeline_interfaces::createPlanningPipelineMap(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&, std::shared_ptr<moveit::core::RobotModel const> const&, std::shared_ptr<rclcpp::Node> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+[move_group-2] #8    Object "/opt/ros/jazzy/lib/libmoveit_planning_pipeline.so.2.12.4", at 0x7388aa5391bf, in planning_pipeline::PlanningPipeline::PlanningPipeline(std::shared_ptr<moveit::core::RobotModel const> const&, std::shared_ptr<rclcpp::Node> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+[move_group-2] #7    Object "/opt/ros/jazzy/lib/libmoveit_planning_pipeline.so.2.12.4", at 0x7388aa537c61, in planning_pipeline::PlanningPipeline::configure()
+[move_group-2] #6    Object "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33", at 0x7388aabbd390, in __cxa_throw
+[move_group-2] #5    Object "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33", at 0x7388aaba7a54, in std::terminate()
+[move_group-2] #4    Object "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33", at 0x7388aabbd0d9, in 
+[move_group-2] #3    Object "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33", at 0x7388aaba7ff4, in 
+[move_group-2] #2    Source "./stdlib/abort.c", line 79, in abort [0x7388aa8e88fe]
+[move_group-2] #1    Source "../sysdeps/posix/raise.c", line 26, in raise [0x7388aa90527d]
+[move_group-2] #0  | Source "./nptl/pthread_kill.c", line 89, in __pthread_kill_internal
+[move_group-2]     | Source "./nptl/pthread_kill.c", line 78, in __pthread_kill_implementation
+[move_group-2]       Source "./nptl/pthread_kill.c", line 44, in __pthread_kill [0x7388aa95eb2c]
+[move_group-2] Aborted (Signal sent by tkill() 15352 1000)
+[ERROR] [move_group-2]: process has died [pid 15352, exit code -6, cmd '/opt/ros/jazzy/lib/moveit_ros_move_group/move_group --ros-args --params-file /tmp/launch_params_cklrm4mk --params-file /tmp/launch_params_9pbxzv0g --params-file /tmp/launch_params_kccn58ev --params-file /tmp/ompl_pipeline__httmucd.yaml --params-file /tmp/launch_params_x1z2ivq_ --params-file /tmp/launch_params_1lu58w5f'].
+[INFO] [execution_node-3]: process started with pid [15394]
+[execution_node-3] [ERROR] [1775570349.418011920] [execution_node]: robot_description parameter is MISSING. Check that execution.launch.py passed it as a Node parameter.
+[execution_node-3] [ERROR] [1775570349.419361919] [execution_node]: Cannot initialize MoveItPy: robot_description missing or empty.
+[execution_node-3] [INFO] [1775570349.420874057] [execution_node]: ExecutionNode ready
+[execution_node-3]   Planning group : arm
+[execution_node-3]   End-effector   : wrist_roll_link
+[execution_node-3]   Reference frame: link1
+[execution_node-3]   Planner        : RRTConnect
+[INFO] [experiment_node-4]: process started with pid [15420]
+[experiment_node-4] /home/ubuntu/.local/lib/python3.12/site-packages/pandas/core/computation/expressions.py:22: UserWarning: Pandas requires version '2.10.2' or newer of 'numexpr' (version '2.9.0' currently installed).
+[experiment_node-4]   from pandas.core.computation.check import NUMEXPR_INSTALLED
+[experiment_node-4] /home/ubuntu/.local/lib/python3.12/site-packages/pandas/core/arrays/masked.py:56: UserWarning: Pandas requires version '1.4.2' or newer of 'bottleneck' (version '1.3.5' currently installed).
+[experiment_node-4]   from pandas.core import (
+[experiment_node-4] [INFO] [1775570359.831118371] [experiment_node]: ExperimentNode initialized
+[experiment_node-4]   Motion mode : MoveIt2 planner-based (no direct IK)
+[experiment_node-4]   Max retries : 2
+[experiment_node-4] [INFO] [1775570359.837873143] [experiment_node]: Workspace bounds: x=[0.05, 0.4]  y=[-0.25, 0.25]  z=[0.05, 0.45]
+[experiment_node-4] [INFO] [1775570359.839463238] [experiment_node]: Robot parameters (from launch args):
+[experiment_node-4]   planning_group    : arm
+[experiment_node-4]   end_effector_link : wrist_roll_link
+[experiment_node-4]   reference_frame   : link1
+[experiment_node-4]   planner_id        : RRTConnect
+[experiment_node-4]   planning_time     : 5.0s
+[experiment_node-4] [INFO] [1775570359.885772132] [experiment_node]: MoveItAdapter initialized
+[experiment_node-4]   Group  : arm
+[experiment_node-4]   EE Link: wrist_roll_link
+[experiment_node-4]   Frame  : link1
+[experiment_node-4] [INFO] [1775570359.887664782] [experiment_node]: Waiting for /move_to_pose action server...
+[experiment_node-4] [INFO] [1775570359.890155490] [experiment_node]: Connected to ExecutionNode
+[experiment_node-4] [INFO] [1775570359.893222097] [experiment_node]: Generated 5 raw poses
+[experiment_node-4] [INFO] [1775570359.895942075] [experiment_node]: Proceeding with 5 workspace-validated poses
+[experiment_node-4] [INFO] [1775570359.900754063] [experiment_node]: 
+[experiment_node-4] =======================================================
+[experiment_node-4] Pose 1/5  Target: (0.2000, 0.0000, 0.2200)
+[experiment_node-4] [INFO] [1775570359.903456685] [experiment_node]:   Rep 1/5
+[experiment_node-4] [INFO] [1775570359.905425075] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570359.913675758] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570359.917585683] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570359.921193254] [experiment_node]:     Retry 1/2 for pose 0 rep 1
+[experiment_node-4] [INFO] [1775570359.923433475] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570359.929406934] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570359.932070830] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570359.934327095] [experiment_node]:     Retry 2/2 for pose 0 rep 1
+[experiment_node-4] [INFO] [1775570359.935739968] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570359.940981030] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570359.944505415] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570359.947479592] [experiment_node]:   ✗ Pose 0 rep 1: failed after 3 attempts — skipping
+[experiment_node-4] [INFO] [1775570359.949932890] [experiment_node]:   Rep 2/5
+[experiment_node-4] [INFO] [1775570359.951709906] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570359.956485554] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570359.959164071] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570359.961622996] [experiment_node]:     Retry 1/2 for pose 0 rep 2
+[experiment_node-4] [INFO] [1775570359.963301586] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570359.967723517] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570359.971302299] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570359.975246335] [experiment_node]:     Retry 2/2 for pose 0 rep 2
+[experiment_node-4] [INFO] [1775570359.977496783] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570359.981885028] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570359.984949129] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570359.988107033] [experiment_node]:   ✗ Pose 0 rep 2: failed after 3 attempts — skipping
+[experiment_node-4] [INFO] [1775570359.991075245] [experiment_node]:   Rep 3/5
+[experiment_node-4] [INFO] [1775570359.993640560] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570359.999006247] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.002015275] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.005224360] [experiment_node]:     Retry 1/2 for pose 0 rep 3
+[experiment_node-4] [INFO] [1775570360.007389931] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570360.013425956] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.016671996] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.018840750] [experiment_node]:     Retry 2/2 for pose 0 rep 3
+[experiment_node-4] [INFO] [1775570360.020627370] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570360.025196295] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.028810520] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.032369491] [experiment_node]:   ✗ Pose 0 rep 3: failed after 3 attempts — skipping
+[experiment_node-4] [INFO] [1775570360.035624119] [experiment_node]:   Rep 4/5
+[experiment_node-4] [INFO] [1775570360.038097640] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570360.046251715] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.049976866] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.053671822] [experiment_node]:     Retry 1/2 for pose 0 rep 4
+[experiment_node-4] [INFO] [1775570360.055842163] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570360.063588032] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.067481997] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.072734503] [experiment_node]:     Retry 2/2 for pose 0 rep 4
+[experiment_node-4] [INFO] [1775570360.075067671] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570360.081981379] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.086214687] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.090882140] [experiment_node]:   ✗ Pose 0 rep 4: failed after 3 attempts — skipping
+[experiment_node-4] [INFO] [1775570360.093846507] [experiment_node]:   Rep 5/5
+[experiment_node-4] [INFO] [1775570360.097049849] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570360.106587387] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.112181197] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.116719567] [experiment_node]:     Retry 1/2 for pose 0 rep 5
+[experiment_node-4] [INFO] [1775570360.121331879] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570360.128728813] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.132536315] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.135743020] [experiment_node]:     Retry 2/2 for pose 0 rep 5
+[experiment_node-4] [INFO] [1775570360.138822366] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570360.146288985] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.149884573] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.153919251] [experiment_node]:   ✗ Pose 0 rep 5: failed after 3 attempts — skipping
+[experiment_node-4] [INFO] [1775570360.158413685] [experiment_node]:   Pose 0: 0/5 valid reps  retries=10
+[experiment_node-4] [INFO] [1775570360.162848552] [experiment_node]: 
+[experiment_node-4] =======================================================
+[experiment_node-4] Pose 2/5  Target: (0.2250, 0.0000, 0.2200)
+[experiment_node-4] [INFO] [1775570360.167439234] [experiment_node]:   Rep 1/5
+[experiment_node-4] [INFO] [1775570360.171596464] [experiment_node]: Sending pose goal to ExecutionNode: (0.225, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570360.178350791] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.182038259] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.185695181] [experiment_node]:     Retry 1/2 for pose 1 rep 1
+[experiment_node-4] [INFO] [1775570360.187123749] [experiment_node]: Sending pose goal to ExecutionNode: (0.225, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570360.193198801] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.197109145] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.200398539] [experiment_node]:     Retry 2/2 for pose 1 rep 1
+[experiment_node-4] [INFO] [1775570360.202180737] [experiment_node]: Sending pose goal to ExecutionNode: (0.225, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570360.206548643] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.209540363] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.211808421] [experiment_node]:   ✗ Pose 1 rep 1: failed after 3 attempts — skipping
+[experiment_node-4] [INFO] [1775570360.214022327] [experiment_node]:   Rep 2/5
+[experiment_node-4] [INFO] [1775570360.215653756] [experiment_node]: Sending pose goal to ExecutionNode: (0.225, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570360.219698101] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.222622282] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.225487382] [experiment_node]:     Retry 1/2 for pose 1 rep 2
+[experiment_node-4] [INFO] [1775570360.227569503] [experiment_node]: Sending pose goal to ExecutionNode: (0.225, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570360.232560555] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.235109772] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.237313578] [experiment_node]:     Retry 2/2 for pose 1 rep 2
+[experiment_node-4] [INFO] [1775570360.238903355] [experiment_node]: Sending pose goal to ExecutionNode: (0.225, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570360.244496874] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.247638512] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.250392896] [experiment_node]:   ✗ Pose 1 rep 2: failed after 3 attempts — skipping
+[experiment_node-4] [INFO] [1775570360.253206815] [experiment_node]:   Rep 3/5
+[experiment_node-4] [INFO] [1775570360.255060777] [experiment_node]: Sending pose goal to ExecutionNode: (0.225, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570360.261664609] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.264933082] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.267808982] [experiment_node]:     Retry 1/2 for pose 1 rep 3
+[experiment_node-4] [INFO] [1775570360.269498137] [experiment_node]: Sending pose goal to ExecutionNode: (0.225, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570360.275119593] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.279319548] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.282110542] [experiment_node]:     Retry 2/2 for pose 1 rep 3
+[experiment_node-4] [INFO] [1775570360.283879457] [experiment_node]: Sending pose goal to ExecutionNode: (0.225, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570360.288945370] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.292723590] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.296989865] [experiment_node]:   ✗ Pose 1 rep 3: failed after 3 attempts — skipping
+[experiment_node-4] [INFO] [1775570360.299330146] [experiment_node]:   Rep 4/5
+[experiment_node-4] [INFO] [1775570360.301335882] [experiment_node]: Sending pose goal to ExecutionNode: (0.225, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570360.306097652] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.308934382] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.311481220] [experiment_node]:     Retry 1/2 for pose 1 rep 4
+[experiment_node-4] [INFO] [1775570360.313604780] [experiment_node]: Sending pose goal to ExecutionNode: (0.225, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570360.318092445] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.321050356] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.323614275] [experiment_node]:     Retry 2/2 for pose 1 rep 4
+[experiment_node-4] [INFO] [1775570360.325464905] [experiment_node]: Sending pose goal to ExecutionNode: (0.225, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570360.331021596] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.334415582] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.337360885] [experiment_node]:   ✗ Pose 1 rep 4: failed after 3 attempts — skipping
+[experiment_node-4] [INFO] [1775570360.339837790] [experiment_node]:   Rep 5/5
+[experiment_node-4] [INFO] [1775570360.341750769] [experiment_node]: Sending pose goal to ExecutionNode: (0.225, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570360.347832369] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.351531735] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.355405817] [experiment_node]:     Retry 1/2 for pose 1 rep 5
+[experiment_node-4] [INFO] [1775570360.357910412] [experiment_node]: Sending pose goal to ExecutionNode: (0.225, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570360.362878385] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.365836475] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.368011840] [experiment_node]:     Retry 2/2 for pose 1 rep 5
+[experiment_node-4] [INFO] [1775570360.370260247] [experiment_node]: Sending pose goal to ExecutionNode: (0.225, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570360.375903370] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.378713652] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.381533558] [experiment_node]:   ✗ Pose 1 rep 5: failed after 3 attempts — skipping
+[experiment_node-4] [INFO] [1775570360.384449373] [experiment_node]:   Pose 1: 0/5 valid reps  retries=10
+[experiment_node-4] [INFO] [1775570360.386487136] [experiment_node]: 
+[experiment_node-4] =======================================================
+[experiment_node-4] Pose 3/5  Target: (0.1750, 0.0000, 0.2200)
+[experiment_node-4] [INFO] [1775570360.388483660] [experiment_node]:   Rep 1/5
+[experiment_node-4] [INFO] [1775570360.390604756] [experiment_node]: Sending pose goal to ExecutionNode: (0.175, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570360.396332397] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.398987217] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.401512161] [experiment_node]:     Retry 1/2 for pose 2 rep 1
+[experiment_node-4] [INFO] [1775570360.402903817] [experiment_node]: Sending pose goal to ExecutionNode: (0.175, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570360.407585274] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.411128677] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.413834429] [experiment_node]:     Retry 2/2 for pose 2 rep 1
+[experiment_node-4] [INFO] [1775570360.415925788] [experiment_node]: Sending pose goal to ExecutionNode: (0.175, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570360.420533896] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.423921705] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.427791609] [experiment_node]:   ✗ Pose 2 rep 1: failed after 3 attempts — skipping
+[experiment_node-4] [INFO] [1775570360.430054157] [experiment_node]:   Rep 2/5
+[experiment_node-4] [INFO] [1775570360.431936824] [experiment_node]: Sending pose goal to ExecutionNode: (0.175, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570360.436584821] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.439759056] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.442306042] [experiment_node]:     Retry 1/2 for pose 2 rep 2
+[experiment_node-4] [INFO] [1775570360.443914086] [experiment_node]: Sending pose goal to ExecutionNode: (0.175, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570360.448348275] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.451025186] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.454251183] [experiment_node]:     Retry 2/2 for pose 2 rep 2
+[experiment_node-4] [INFO] [1775570360.455706669] [experiment_node]: Sending pose goal to ExecutionNode: (0.175, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570360.460316706] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.462619064] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.466086241] [experiment_node]:   ✗ Pose 2 rep 2: failed after 3 attempts — skipping
+[experiment_node-4] [INFO] [1775570360.469140273] [experiment_node]:   Rep 3/5
+[experiment_node-4] [INFO] [1775570360.470984196] [experiment_node]: Sending pose goal to ExecutionNode: (0.175, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570360.475898090] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.478783720] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.481326036] [experiment_node]:     Retry 1/2 for pose 2 rep 3
+[experiment_node-4] [INFO] [1775570360.482710923] [experiment_node]: Sending pose goal to ExecutionNode: (0.175, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570360.486879962] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.489838835] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.492254036] [experiment_node]:     Retry 2/2 for pose 2 rep 3
+[experiment_node-4] [INFO] [1775570360.494813608] [experiment_node]: Sending pose goal to ExecutionNode: (0.175, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570360.500337078] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.502621958] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.505023325] [experiment_node]:   ✗ Pose 2 rep 3: failed after 3 attempts — skipping
+[experiment_node-4] [INFO] [1775570360.507342945] [experiment_node]:   Rep 4/5
+[experiment_node-4] [INFO] [1775570360.509281562] [experiment_node]: Sending pose goal to ExecutionNode: (0.175, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570360.514397338] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.517007895] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.519218364] [experiment_node]:     Retry 1/2 for pose 2 rep 4
+[experiment_node-4] [INFO] [1775570360.520726489] [experiment_node]: Sending pose goal to ExecutionNode: (0.175, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570360.526017923] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.529243487] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.531377867] [experiment_node]:     Retry 2/2 for pose 2 rep 4
+[experiment_node-4] [INFO] [1775570360.532958210] [experiment_node]: Sending pose goal to ExecutionNode: (0.175, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570360.538202360] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.542584376] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.546523588] [experiment_node]:   ✗ Pose 2 rep 4: failed after 3 attempts — skipping
+[experiment_node-4] [INFO] [1775570360.548787162] [experiment_node]:   Rep 5/5
+[experiment_node-4] [INFO] [1775570360.550349419] [experiment_node]: Sending pose goal to ExecutionNode: (0.175, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570360.554679017] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.557306957] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.559612002] [experiment_node]:     Retry 1/2 for pose 2 rep 5
+[experiment_node-4] [INFO] [1775570360.561084167] [experiment_node]: Sending pose goal to ExecutionNode: (0.175, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570360.565140612] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.567718461] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.569892154] [experiment_node]:     Retry 2/2 for pose 2 rep 5
+[experiment_node-4] [INFO] [1775570360.571256818] [experiment_node]: Sending pose goal to ExecutionNode: (0.175, 0.000, 0.220)
+[execution_node-3] [WARN] [1775570360.576719282] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.580444264] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.583173761] [experiment_node]:   ✗ Pose 2 rep 5: failed after 3 attempts — skipping
+[experiment_node-4] [INFO] [1775570360.585643750] [experiment_node]:   Pose 2: 0/5 valid reps  retries=10
+[experiment_node-4] [INFO] [1775570360.587878164] [experiment_node]: 
+[experiment_node-4] =======================================================
+[experiment_node-4] Pose 4/5  Target: (0.2000, 0.0250, 0.2200)
+[experiment_node-4] [INFO] [1775570360.590096110] [experiment_node]:   Rep 1/5
+[experiment_node-4] [INFO] [1775570360.591950928] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, 0.025, 0.220)
+[execution_node-3] [WARN] [1775570360.596720430] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.600270168] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.603036831] [experiment_node]:     Retry 1/2 for pose 3 rep 1
+[experiment_node-4] [INFO] [1775570360.604968986] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, 0.025, 0.220)
+[execution_node-3] [WARN] [1775570360.609613366] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.612258070] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.614738053] [experiment_node]:     Retry 2/2 for pose 3 rep 1
+[experiment_node-4] [INFO] [1775570360.616198489] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, 0.025, 0.220)
+[execution_node-3] [WARN] [1775570360.620613344] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.623062872] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.625487423] [experiment_node]:   ✗ Pose 3 rep 1: failed after 3 attempts — skipping
+[experiment_node-4] [INFO] [1775570360.627308617] [experiment_node]:   Rep 2/5
+[experiment_node-4] [INFO] [1775570360.629080572] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, 0.025, 0.220)
+[execution_node-3] [WARN] [1775570360.632951757] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.635901131] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.638010752] [experiment_node]:     Retry 1/2 for pose 3 rep 2
+[experiment_node-4] [INFO] [1775570360.639470711] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, 0.025, 0.220)
+[execution_node-3] [WARN] [1775570360.644928193] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.647659181] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.650030510] [experiment_node]:     Retry 2/2 for pose 3 rep 2
+[experiment_node-4] [INFO] [1775570360.651445582] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, 0.025, 0.220)
+[execution_node-3] [WARN] [1775570360.656105214] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.658867377] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.661404960] [experiment_node]:   ✗ Pose 3 rep 2: failed after 3 attempts — skipping
+[experiment_node-4] [INFO] [1775570360.663470910] [experiment_node]:   Rep 3/5
+[experiment_node-4] [INFO] [1775570360.665405106] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, 0.025, 0.220)
+[execution_node-3] [WARN] [1775570360.670315029] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.673101470] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.675392385] [experiment_node]:     Retry 1/2 for pose 3 rep 3
+[experiment_node-4] [INFO] [1775570360.677017097] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, 0.025, 0.220)
+[execution_node-3] [WARN] [1775570360.681960447] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.684664085] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.686770394] [experiment_node]:     Retry 2/2 for pose 3 rep 3
+[experiment_node-4] [INFO] [1775570360.688249201] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, 0.025, 0.220)
+[execution_node-3] [WARN] [1775570360.692664100] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.695273583] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.697608381] [experiment_node]:   ✗ Pose 3 rep 3: failed after 3 attempts — skipping
+[experiment_node-4] [INFO] [1775570360.699677175] [experiment_node]:   Rep 4/5
+[experiment_node-4] [INFO] [1775570360.701210812] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, 0.025, 0.220)
+[execution_node-3] [WARN] [1775570360.705104111] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.707896465] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.711731027] [experiment_node]:     Retry 1/2 for pose 3 rep 4
+[experiment_node-4] [INFO] [1775570360.713693156] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, 0.025, 0.220)
+[execution_node-3] [WARN] [1775570360.718385232] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.721010961] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.723479870] [experiment_node]:     Retry 2/2 for pose 3 rep 4
+[experiment_node-4] [INFO] [1775570360.725416340] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, 0.025, 0.220)
+[execution_node-3] [WARN] [1775570360.729604792] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.732508477] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.735470734] [experiment_node]:   ✗ Pose 3 rep 4: failed after 3 attempts — skipping
+[experiment_node-4] [INFO] [1775570360.737357768] [experiment_node]:   Rep 5/5
+[experiment_node-4] [INFO] [1775570360.739074645] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, 0.025, 0.220)
+[execution_node-3] [WARN] [1775570360.745434094] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.748437981] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.751648611] [experiment_node]:     Retry 1/2 for pose 3 rep 5
+[experiment_node-4] [INFO] [1775570360.753598851] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, 0.025, 0.220)
+[execution_node-3] [WARN] [1775570360.758218154] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.760947027] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.763489571] [experiment_node]:     Retry 2/2 for pose 3 rep 5
+[experiment_node-4] [INFO] [1775570360.765615807] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, 0.025, 0.220)
+[execution_node-3] [WARN] [1775570360.770551637] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.773389355] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.776505164] [experiment_node]:   ✗ Pose 3 rep 5: failed after 3 attempts — skipping
+[experiment_node-4] [INFO] [1775570360.779226475] [experiment_node]:   Pose 3: 0/5 valid reps  retries=10
+[experiment_node-4] [INFO] [1775570360.781459662] [experiment_node]: 
+[experiment_node-4] =======================================================
+[experiment_node-4] Pose 5/5  Target: (0.2000, -0.0250, 0.2200)
+[experiment_node-4] [INFO] [1775570360.783503781] [experiment_node]:   Rep 1/5
+[experiment_node-4] [INFO] [1775570360.785327451] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, -0.025, 0.220)
+[execution_node-3] [WARN] [1775570360.790071653] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.792739954] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.795043782] [experiment_node]:     Retry 1/2 for pose 4 rep 1
+[experiment_node-4] [INFO] [1775570360.796503848] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, -0.025, 0.220)
+[execution_node-3] [WARN] [1775570360.801373712] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.804565726] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.806926637] [experiment_node]:     Retry 2/2 for pose 4 rep 1
+[experiment_node-4] [INFO] [1775570360.808491930] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, -0.025, 0.220)
+[execution_node-3] [WARN] [1775570360.812926046] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.815620729] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.818078935] [experiment_node]:   ✗ Pose 4 rep 1: failed after 3 attempts — skipping
+[experiment_node-4] [INFO] [1775570360.819960639] [experiment_node]:   Rep 2/5
+[experiment_node-4] [INFO] [1775570360.821549137] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, -0.025, 0.220)
+[execution_node-3] [WARN] [1775570360.826724587] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.829648789] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.831698345] [experiment_node]:     Retry 1/2 for pose 4 rep 2
+[experiment_node-4] [INFO] [1775570360.833067070] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, -0.025, 0.220)
+[execution_node-3] [WARN] [1775570360.837019335] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.839307045] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.842076014] [experiment_node]:     Retry 2/2 for pose 4 rep 2
+[experiment_node-4] [INFO] [1775570360.844010686] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, -0.025, 0.220)
+[execution_node-3] [WARN] [1775570360.848337227] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.850687677] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.853357818] [experiment_node]:   ✗ Pose 4 rep 2: failed after 3 attempts — skipping
+[experiment_node-4] [INFO] [1775570360.855450695] [experiment_node]:   Rep 3/5
+[experiment_node-4] [INFO] [1775570360.856873488] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, -0.025, 0.220)
+[execution_node-3] [WARN] [1775570360.861544511] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.864626158] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.867126268] [experiment_node]:     Retry 1/2 for pose 4 rep 3
+[experiment_node-4] [INFO] [1775570360.869054848] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, -0.025, 0.220)
+[execution_node-3] [WARN] [1775570360.873685743] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.876508865] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.879003782] [experiment_node]:     Retry 2/2 for pose 4 rep 3
+[experiment_node-4] [INFO] [1775570360.880642963] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, -0.025, 0.220)
+[execution_node-3] [WARN] [1775570360.884941190] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.887358659] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.889746308] [experiment_node]:   ✗ Pose 4 rep 3: failed after 3 attempts — skipping
+[experiment_node-4] [INFO] [1775570360.891585145] [experiment_node]:   Rep 4/5
+[experiment_node-4] [INFO] [1775570360.893737474] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, -0.025, 0.220)
+[execution_node-3] [WARN] [1775570360.898070800] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.900379504] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.902364034] [experiment_node]:     Retry 1/2 for pose 4 rep 4
+[experiment_node-4] [INFO] [1775570360.903759847] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, -0.025, 0.220)
+[execution_node-3] [WARN] [1775570360.909300101] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.912568024] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.914757012] [experiment_node]:     Retry 2/2 for pose 4 rep 4
+[experiment_node-4] [INFO] [1775570360.916061177] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, -0.025, 0.220)
+[execution_node-3] [WARN] [1775570360.920468672] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.922743884] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.925507106] [experiment_node]:   ✗ Pose 4 rep 4: failed after 3 attempts — skipping
+[experiment_node-4] [INFO] [1775570360.928303691] [experiment_node]:   Rep 5/5
+[experiment_node-4] [INFO] [1775570360.930373765] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, -0.025, 0.220)
+[execution_node-3] [WARN] [1775570360.935223850] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.937636682] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.939827415] [experiment_node]:     Retry 1/2 for pose 4 rep 5
+[experiment_node-4] [INFO] [1775570360.941393574] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, -0.025, 0.220)
+[execution_node-3] [WARN] [1775570360.946428963] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.948671838] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.950834606] [experiment_node]:     Retry 2/2 for pose 4 rep 5
+[experiment_node-4] [INFO] [1775570360.952273550] [experiment_node]: Sending pose goal to ExecutionNode: (0.200, -0.025, 0.220)
+[execution_node-3] [WARN] [1775570360.956008782] [execution_node]: Rejecting goal: not ready (MoveItPy not initialized)
+[experiment_node-4] [ERROR] [1775570360.958214618] [experiment_node]: Goal rejected by ExecutionNode
+[experiment_node-4] [WARN] [1775570360.960568834] [experiment_node]:   ✗ Pose 4 rep 5: failed after 3 attempts — skipping
+[experiment_node-4] [INFO] [1775570360.962814861] [experiment_node]:   Pose 4: 0/5 valid reps  retries=10
+[experiment_node-4] [INFO] [1775570360.965376972] [experiment_node]: 
+[experiment_node-4] =======================================================
+[experiment_node-4] EXPERIMENT COMPLETE
+[experiment_node-4]   Run ID          : run_001
+[experiment_node-4]   Poses succeeded : 0/5
+[experiment_node-4]   Poses filtered  : 0 (workspace)
+[experiment_node-4]   Total retries   : 50
+[experiment_node-4]   Output          : /home/ubuntu/autocert_data/experiments/run_001.csv
+[experiment_node-4] [WARN] [1775570360.968123636] [experiment_node]:   Failed pose IDs : [0, 1, 2, 3, 4]
+[experiment_node-4] [INFO] [1775570360.969270314] [experiment_node]: MoveItAdapter disconnected
+[INFO] [experiment_node-4]: process has finished cleanly [pid 15420]
+^C[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[robot_state_publisher-1] [INFO] [1775570363.693193926] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[execution_node-3] Traceback (most recent call last):
+[execution_node-3]   File "/home/ubuntu/autocert_ws/install/autocert_execution/lib/autocert_execution/execution_node", line 33, in <module>
+[execution_node-3]     sys.exit(load_entry_point('autocert-execution==0.0.0', 'console_scripts', 'execution_node')())
+[execution_node-3]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[execution_node-3]   File "/home/ubuntu/autocert_ws/build/autocert_execution/autocert_execution/execution_node.py", line 401, in main
+[execution_node-3]     rclpy.shutdown()
+[execution_node-3]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 134, in shutdown
+[execution_node-3]     _shutdown(context=context)
+[execution_node-3]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/utilities.py", line 82, in shutdown
+[execution_node-3]     context.shutdown()
+[execution_node-3]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/context.py", line 129, in shutdown
+[execution_node-3]     self.__context.shutdown()
+[execution_node-3] rclpy._rclpy_pybind11.RCLError: failed to shutdown: rcl_shutdown already called on the given context, at ./src/rcl/init.c:333
+[INFO] [robot_state_publisher-1]: process has finished cleanly [pid 15351]
+[ERROR] [execution_node-3]: process has died [pid 15394, exit code 1, cmd '/home/ubuntu/autocert_ws/install/autocert_execution/lib/autocert_execution/execution_node --ros-args -r __node:=execution_node --params-file /home/ubuntu/autocert_ws/install/autocert_execution/share/autocert_execution/config/execution_params.yaml --params-file /tmp/launch_params_fdt7o2we --params-file /tmp/launch_params_5g6c5uae --params-file /tmp/launch_params_yw_57lqv'].
+$ exit
+
+Script done on 2026-04-07 13:59:26+00:00 [COMMAND_EXIT_CODE="0"]

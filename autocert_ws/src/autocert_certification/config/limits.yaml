@@ -1,0 +1,13 @@
+# Robot specification limits for ISO 9283 certification
+
+# Position accuracy limits (mm)
+accuracy_limit_mm: 1.0
+accuracy_warning_mm: 0.8
+
+# Position repeatability limits (mm)
+repeatability_limit_mm: 0.1
+repeatability_warning_mm: 0.05
+
+# Orientation limits (degrees)
+orientation_accuracy_limit_deg: 0.5
+orientation_repeatability_limit_deg: 0.1

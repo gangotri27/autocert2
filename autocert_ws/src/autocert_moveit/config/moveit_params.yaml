@@ -1,0 +1,34 @@
+# Robot-agnostic MoveIt2 parameters
+# These MUST be overridden per robot via launch arguments
+
+# Planning group — must match SRDF
+planning_group: arm
+
+# End-effector link — must match URDF
+end_effector_link: tool0
+
+# Reference/base frame
+reference_frame: base_link
+
+# Planner configuration
+planner_id: RRTConnect
+planning_pipeline: ompl
+planning_time: 5.0
+
+# Scaling factors
+velocity_scaling: 0.3
+acceleration_scaling: 0.3
+
+# Workspace bounds (meters) — set conservatively
+workspace_bounds:
+  x: [-1.5, 1.5]
+  y: [-1.5, 1.5]
+  z: [-0.5, 2.0]
+
+# Execution tolerances
+goal_position_tolerance: 0.001     # 1 mm
+goal_orientation_tolerance: 0.01   # ~0.57 degrees
+goal_joint_tolerance: 0.001
+
+# Number of planning attempts before declaring failure
+planning_attempts: 3

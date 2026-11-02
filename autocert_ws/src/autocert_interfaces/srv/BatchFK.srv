@@ -1,0 +1,13 @@
+# Batch forward kinematics request
+int32 num_samples
+int32 num_joints
+float64[] joint_samples
+bool filter_collisions
+string planning_group
+---
+geometry_msgs/Pose[] poses
+int32[] valid_indices
+string end_effector_link
+float64[] computation_time_ms
+int32 error_code
+string error_message

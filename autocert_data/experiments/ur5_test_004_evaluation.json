@@ -1,0 +1,87 @@
+{
+    "run_id": "ur5_test_004",
+    "timestamp": "2026-07-06T16:27:31.744740",
+    "test_standard": "ISO 9283",
+    "overall": {
+        "overall_mean_accuracy_mm": 0.33632280126336467,
+        "overall_max_accuracy_mm": 0.40398426284737954,
+        "overall_mean_repeatability_mm": 2.3074877848988407,
+        "overall_max_repeatability_mm": 3.492291230525545,
+        "overall_mean_orientation_accuracy_deg": 0.5415746817849749,
+        "overall_mean_orientation_repeatability_deg": 1.5559652384723404,
+        "num_poses": 5
+    },
+    "poses": {
+        "0": {
+            "ap_distance_mm": 0.29773225983716534,
+            "rp_distance_mm": 0.9847714223766438,
+            "ao_deg": 0.941837378357548,
+            "ro_deg": 1.775744609432543,
+            "mean_x": 0.2959976096329435,
+            "mean_y": -0.00013639391155004333,
+            "mean_z": 0.2114294733488203,
+            "num_samples": 5
+        },
+        "1": {
+            "ap_distance_mm": 0.28193965715351055,
+            "rp_distance_mm": 1.9271769878069818,
+            "ao_deg": 0.5848741689085454,
+            "ro_deg": 1.5496339636640548,
+            "mean_x": 0.32988005120145186,
+            "mean_y": -0.00013516720708940002,
+            "mean_z": 0.2114201745227296,
+            "num_samples": 5
+        },
+        "2": {
+            "ap_distance_mm": 0.2990726102163033,
+            "rp_distance_mm": 3.492291230525545,
+            "ao_deg": 0.6085724862124537,
+            "ro_deg": 1.2882552764472064,
+            "mean_x": 0.2624857829028799,
+            "mean_y": 3.535615283102142e-05,
+            "mean_z": 0.2113358837908721,
+            "num_samples": 5
+        },
+        "3": {
+            "ap_distance_mm": 0.40398426284737954,
+            "rp_distance_mm": 2.7926175372673634,
+            "ao_deg": 0.12313292939932056,
+            "ro_deg": 1.8587333398220225,
+            "mean_x": 0.29629887005905864,
+            "mean_y": 0.034207440428373544,
+            "mean_z": 0.21143979907548888,
+            "num_samples": 5
+        },
+        "4": {
+            "ap_distance_mm": 0.3988852162624644,
+            "rp_distance_mm": 2.3405817465176684,
+            "ao_deg": 0.44945644604700646,
+            "ro_deg": 1.3074590029958753,
+            "mean_x": 0.29621621424239536,
+            "mean_y": -0.03422149797346554,
+            "mean_z": 0.21174434600724404,
+            "num_samples": 5
+        }
+    },
+    "test_cube_center": [
+        0.2962,
+        0.0,
+        0.2116
+    ],
+    "test_cube_size_mm": 67.7,
+    "workspace_bounds": {
+        "x": [
+            0.2454,
+            0.347
+        ],
+        "y": [
+            -0.0508,
+            0.0508
+        ],
+        "z": [
+            0.1608,
+            0.2624
+        ]
+    },
+    "pose_strategy": "iso_cube"
+}

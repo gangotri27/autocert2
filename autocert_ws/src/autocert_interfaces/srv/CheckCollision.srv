@@ -1,0 +1,9 @@
+# Check collision for joint configuration
+float64[] joint_positions
+string planning_group
+---
+bool in_collision
+bool self_collision
+bool environment_collision
+string[] colliding_links
+float64[] contact_points

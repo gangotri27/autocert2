@@ -1,0 +1,29 @@
+# Default parameters for AutoCert
+
+autocert_core:
+  ros__parameters:
+    # Robot configuration
+    robot_description: "robot_description"
+    planning_group: ""  # Auto-select if empty
+    end_effector_link: ""  # Auto-detect if empty
+    
+    # Performance
+    service_threads: 4
+    collision_checking_enabled: true
+    
+    # Logging
+    log_level: "info"
+
+autocert_python:
+  ros__parameters:
+    # Default sampling parameters
+    default_num_samples: 5000
+    default_strategy: "halton"
+    
+    # Visualization
+    viz_alpha: 0.3
+    viz_point_size: 1.0
+    
+    # Output
+    output_format: "json"
+    compression: false

@@ -1,0 +1,20 @@
+name: Jazzy Semi Binary Testing
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - kilted
+  push:
+    branches:
+      - kilted
+  schedule:
+    - cron: '13 4 * * *'
+
+jobs:
+  jazzy_semi_binary_testing:
+    uses: ./.github/workflows/reusable_ici.yml
+    with:
+      ros_distro: jazzy
+      ros_repo: testing
+      ref_for_scheduled_build: kilted
+      upstream_workspace: ur_simulation_gz.jazzy.repos

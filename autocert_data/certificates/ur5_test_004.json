@@ -1,0 +1,120 @@
+{
+    "metadata": {
+        "certificate_id": "AC-UR5_TEST_004",
+        "issue_date": "2026-07-06",
+        "valid_until": "2027-07-06",
+        "standard": "ISO 9283:1998",
+        "laboratory": "AutoCert Lab",
+        "technician": "AutoCert System",
+        "dataset_hash": "46e9154ab00e686b956343a5c6a333a34bc03eeb4b6a78177e8ffc754d29bcb6",
+        "robot_model_hash": "c99b4b4f2d98a1045a5ea529978f9d0f8fb2eabcfaa273707a230861ca4f8b9e",
+        "srdf_hash": "21be655bb9953c086ee70f91eb048d292b2423be5916ddcba55cf5dad9c014aa",
+        "controller_version": "ROS2_JAZZY",
+        "issues": [
+            "Max repeatability 3.492mm exceeds limit 0.100mm",
+            "Source data was generated with robot_mode=simulation. Measurements are synthetic and do not reflect real hardware performance."
+        ]
+    },
+    "robot": {
+        "manufacturer": "ROBOTIS",
+        "model": "OMX-6DOF-R1",
+        "serial_number": "OMX-DEMO-001",
+        "software_version": "1.0",
+        "payload_kg": 0.3,
+        "reach_m": 0.846
+    },
+    "test_conditions": {
+        "ambient_temperature_c": 22.5,
+        "relative_humidity_percent": 45,
+        "measurement_system": "Leica AT960",
+        "measurement_system_calibration_date": "2024-01-15",
+        "test_cube_size_mm": 67.7,
+        "test_cube_center": [
+            0.2962,
+            0.0,
+            0.2116
+        ],
+        "repetitions_per_pose": 5,
+        "outlier_threshold": 3.0,
+        "confidence_level": 0.95,
+        "pose_strategy": "iso_cube"
+    },
+    "pose_results": [
+        {
+            "pose_id": 0,
+            "pose_label": "P0",
+            "accuracy_mm": 0.29773225983716534,
+            "repeatability_mm": 0.9847714223766438,
+            "accuracy_x_mm": 0,
+            "accuracy_y_mm": 0,
+            "accuracy_z_mm": 0,
+            "orientation_error_deg": 0.941837378357548,
+            "orientation_repeatability_deg": 1.775744609432543,
+            "num_samples": 5,
+            "outliers_removed": 0
+        },
+        {
+            "pose_id": 1,
+            "pose_label": "P1",
+            "accuracy_mm": 0.28193965715351055,
+            "repeatability_mm": 1.9271769878069818,
+            "accuracy_x_mm": 0,
+            "accuracy_y_mm": 0,
+            "accuracy_z_mm": 0,
+            "orientation_error_deg": 0.5848741689085454,
+            "orientation_repeatability_deg": 1.5496339636640548,
+            "num_samples": 5,
+            "outliers_removed": 0
+        },
+        {
+            "pose_id": 2,
+            "pose_label": "P2",
+            "accuracy_mm": 0.2990726102163033,
+            "repeatability_mm": 3.492291230525545,
+            "accuracy_x_mm": 0,
+            "accuracy_y_mm": 0,
+            "accuracy_z_mm": 0,
+            "orientation_error_deg": 0.6085724862124537,
+            "orientation_repeatability_deg": 1.2882552764472064,
+            "num_samples": 5,
+            "outliers_removed": 0
+        },
+        {
+            "pose_id": 3,
+            "pose_label": "P3",
+            "accuracy_mm": 0.40398426284737954,
+            "repeatability_mm": 2.7926175372673634,
+            "accuracy_x_mm": 0,
+            "accuracy_y_mm": 0,
+            "accuracy_z_mm": 0,
+            "orientation_error_deg": 0.12313292939932056,
+            "orientation_repeatability_deg": 1.8587333398220225,
+            "num_samples": 5,
+            "outliers_removed": 0
+        },
+        {
+            "pose_id": 4,
+            "pose_label": "P4",
+            "accuracy_mm": 0.3988852162624644,
+            "repeatability_mm": 2.3405817465176684,
+            "accuracy_x_mm": 0,
+            "accuracy_y_mm": 0,
+            "accuracy_z_mm": 0,
+            "orientation_error_deg": 0.44945644604700646,
+            "orientation_repeatability_deg": 1.3074590029958753,
+            "num_samples": 5,
+            "outliers_removed": 0
+        }
+    ],
+    "overall": {
+        "mean_accuracy_mm": 0.33632280126336467,
+        "max_accuracy_mm": 0.40398426284737954,
+        "mean_repeatability_mm": 2.3074877848988407,
+        "max_repeatability_mm": 3.492291230525545,
+        "mean_orientation_accuracy_deg": 0.5415746817849749,
+        "mean_orientation_repeatability_deg": 1.5559652384723404,
+        "accuracy_95_confidence_mm": 0.05,
+        "repeatability_95_confidence_mm": 0.02,
+        "certification_status": "SIMULATED - NOT A VALID CERTIFICATION"
+    }
+}

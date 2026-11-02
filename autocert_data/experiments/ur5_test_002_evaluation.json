@@ -1,0 +1,87 @@
+{
+    "run_id": "ur5_test_002",
+    "timestamp": "2026-07-06T09:14:45.373822",
+    "test_standard": "ISO 9283",
+    "overall": {
+        "overall_mean_accuracy_mm": 0.4382786102730509,
+        "overall_max_accuracy_mm": 0.7938648606428781,
+        "overall_mean_repeatability_mm": 2.3030494615426305,
+        "overall_max_repeatability_mm": 2.7680103022661036,
+        "overall_mean_orientation_accuracy_deg": 0.7137434651874321,
+        "overall_mean_orientation_repeatability_deg": 2.0035141538773167,
+        "num_poses": 5
+    },
+    "poses": {
+        "0": {
+            "ap_distance_mm": 0.5805993395611669,
+            "rp_distance_mm": 1.7867091468809109,
+            "ao_deg": 0.6321685978770973,
+            "ro_deg": 1.5927150062270679,
+            "mean_x": 0.2966102956799673,
+            "mean_y": 0.0004084269323021155,
+            "mean_z": 0.2116440509826151,
+            "num_samples": 5
+        },
+        "1": {
+            "ap_distance_mm": 0.5384891227904974,
+            "rp_distance_mm": 2.12420708228529,
+            "ao_deg": 1.0763190944704135,
+            "ro_deg": 2.0381808398326346,
+            "mean_x": 0.3305395698387476,
+            "mean_y": -1.671625428611998e-05,
+            "mean_z": 0.21137636530860582,
+            "num_samples": 5
+        },
+        "2": {
+            "ap_distance_mm": 0.07496868921518529,
+            "rp_distance_mm": 2.229973571020877,
+            "ao_deg": 1.3891883511480996,
+            "ro_deg": 2.0447020114188814,
+            "mean_x": 0.2623199655853145,
+            "mean_y": -4.101427551321314e-05,
+            "mean_z": 0.2115448994782124,
+            "num_samples": 5
+        },
+        "3": {
+            "ap_distance_mm": 0.2034710391555265,
+            "rp_distance_mm": 2.6063472052599703,
+            "ao_deg": 0.3397240201721094,
+            "ro_deg": 1.986096299894725,
+            "mean_x": 0.29630613442101233,
+            "mean_y": 0.03376936857024212,
+            "mean_z": 0.21144626476985867,
+            "num_samples": 5
+        },
+        "4": {
+            "ap_distance_mm": 0.7938648606428781,
+            "rp_distance_mm": 2.7680103022661036,
+            "ao_deg": 0.13131726226944077,
+            "ro_deg": 2.355876612013275,
+            "mean_x": 0.29545577737213086,
+            "mean_y": -0.034030840350399535,
+            "mean_z": 0.2118089278937778,
+            "num_samples": 5
+        }
+    },
+    "test_cube_center": [
+        0.2962,
+        0.0,
+        0.2116
+    ],
+    "test_cube_size_mm": 67.7,
+    "workspace_bounds": {
+        "x": [
+            0.2454,
+            0.347
+        ],
+        "y": [
+            -0.0508,
+            0.0508
+        ],
+        "z": [
+            0.1608,
+            0.2624
+        ]
+    },
+    "pose_strategy": "iso_cube"
+}

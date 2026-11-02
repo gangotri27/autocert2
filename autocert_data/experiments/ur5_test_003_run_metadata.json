@@ -1,0 +1,25 @@
+{
+  "run_id": "ur5_test_003",
+  "strategy": "iso_cube",
+  "pose_set": "standard",
+  "cube_center": [
+    0.2962,
+    0.0,
+    0.2116
+  ],
+  "cube_size_mm": 67.7,
+  "workspace_bounds": {
+    "x": [
+      0.2454,
+      0.347
+    ],
+    "y": [
+      -0.0508,
+      0.0508
+    ],
+    "z": [
+      0.1608,
+      0.2624
+    ]
+  }
+}

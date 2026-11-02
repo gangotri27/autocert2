@@ -1,0 +1,18 @@
+# Request: Get comprehensive robot information
+---
+# Response: Complete robot metadata
+string robot_name
+string planning_group
+string end_effector_link
+string[] joint_names
+string[] link_names
+string[] group_names
+float64[] joint_min_limits
+float64[] joint_max_limits
+float64[] joint_velocity_limits
+int32 num_joints
+int32 num_links
+bool collision_checking_available
+bool kinematics_solver_available
+string kinematics_solver_name
+float64 default_timeout

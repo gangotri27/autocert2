@@ -1,0 +1,617 @@
+Script started on 2026-07-05 16:36:23+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+$ ./run_autocert_pipeline.sh \
+  urdf_file:=/opt/ros/jazzy/share/moveit_resources_panda_description/urdf/panda.urdf.xacro \
+  srdf_file:=/opt/ros/jazzy/share/moveit_resources_panda_moveit_config/config/panda.srdf \
+  planning_group:=panda_arm end_eff> ector_link:=panda_link8 reference_frame:=panda_link0 \
+  run_id:=panda_test_009 robot_mode:=simulation auto_cube:=true \
+  initial_joint_positions:="panda_joint1=0.0> ,panda_joint2=-0.785398,panda_joint3=0.0,panda_joint4=-2.356194,panda_joint5=0.0,panda_joint6=1.57> 0796,panda_joint7=0.785398"> > 
+============================================================
+ AutoCert pipeline — run_id: panda_test_009
+ Stage 1/2 (ros2 launch): experiment_node -> evaluation_node
+ auto_cube: ON — test cube will be computed from URDF reach
+============================================================
+[INFO] [launch]: All log files can be found below /home/ubuntu/.ros/log/2026-07-05-16-37-03-504970-c182b1819e36-6276
+[INFO] [launch]: Default logging verbosity is set to INFO
+[full_pipeline] using manual initial_joint_positions override: {'panda_joint1': 0.0, 'panda_joint2': -0.785398, 'panda_joint3': 0.0, 'panda_joint4': -2.356194, 'panda_joint5': 0.0, 'panda_joint6': 1.570796, 'panda_joint7': 0.785398}
+Unknown attribute "D" in /robot[@name='panda']/joint[@name='panda_joint1']/dynamics
+Unknown attribute "K" in /robot[@name='panda']/joint[@name='panda_joint1']/dynamics
+Unknown attribute "mu_coulomb" in /robot[@name='panda']/joint[@name='panda_joint1']/dynamics
+Unknown attribute "mu_viscous" in /robot[@name='panda']/joint[@name='panda_joint1']/dynamics
+Unknown attribute "D" in /robot[@name='panda']/joint[@name='panda_joint2']/dynamics
+Unknown attribute "K" in /robot[@name='panda']/joint[@name='panda_joint2']/dynamics
+Unknown attribute "mu_coulomb" in /robot[@name='panda']/joint[@name='panda_joint2']/dynamics
+Unknown attribute "mu_viscous" in /robot[@name='panda']/joint[@name='panda_joint2']/dynamics
+Unknown attribute "D" in /robot[@name='panda']/joint[@name='panda_joint3']/dynamics
+Unknown attribute "K" in /robot[@name='panda']/joint[@name='panda_joint3']/dynamics
+Unknown attribute "mu_coulomb" in /robot[@name='panda']/joint[@name='panda_joint3']/dynamics
+Unknown attribute "mu_viscous" in /robot[@name='panda']/joint[@name='panda_joint3']/dynamics
+Unknown attribute "D" in /robot[@name='panda']/joint[@name='panda_joint4']/dynamics
+Unknown attribute "K" in /robot[@name='panda']/joint[@name='panda_joint4']/dynamics
+Unknown attribute "mu_coulomb" in /robot[@name='panda']/joint[@name='panda_joint4']/dynamics
+Unknown attribute "mu_viscous" in /robot[@name='panda']/joint[@name='panda_joint4']/dynamics
+Unknown attribute "D" in /robot[@name='panda']/joint[@name='panda_joint5']/dynamics
+Unknown attribute "K" in /robot[@name='panda']/joint[@name='panda_joint5']/dynamics
+Unknown attribute "mu_coulomb" in /robot[@name='panda']/joint[@name='panda_joint5']/dynamics
+Unknown attribute "mu_viscous" in /robot[@name='panda']/joint[@name='panda_joint5']/dynamics
+Unknown attribute "D" in /robot[@name='panda']/joint[@name='panda_joint6']/dynamics
+Unknown attribute "K" in /robot[@name='panda']/joint[@name='panda_joint6']/dynamics
+Unknown attribute "mu_coulomb" in /robot[@name='panda']/joint[@name='panda_joint6']/dynamics
+Unknown attribute "mu_viscous" in /robot[@name='panda']/joint[@name='panda_joint6']/dynamics
+Unknown attribute "D" in /robot[@name='panda']/joint[@name='panda_joint7']/dynamics
+Unknown attribute "K" in /robot[@name='panda']/joint[@name='panda_joint7']/dynamics
+Unknown attribute "mu_coulomb" in /robot[@name='panda']/joint[@name='panda_joint7']/dynamics
+Unknown attribute "mu_viscous" in /robot[@name='panda']/joint[@name='panda_joint7']/dynamics
+[full_pipeline] auto_cube: estimated reach=0.511m -> cube_center=[0.1787, 0.0, 0.1277] cube_size_mm=40.86 workspace_bounds={'x': [0.1481, 0.2093], 'y': [-0.0306, 0.0306], 'z': [0.0971, 0.1583]}
+[INFO] [robot_state_publisher-1]: process started with pid [6280]
+[INFO] [static_transform_publisher-2]: process started with pid [6281]
+[INFO] [joint_state_publisher-3]: process started with pid [6282]
+[INFO] [execution_node-4]: process started with pid [6283]
+[static_transform_publisher-2] [WARN] [1783269427.970399191] []: Old-style arguments are deprecated; see --help for new-style arguments
+[static_transform_publisher-2] [INFO] [1783269428.779040835] [world_to_reference_frame_static_tf]: Spinning until stopped - publishing transform
+[static_transform_publisher-2] translation: ('0.000000', '0.000000', '0.000000')
+[static_transform_publisher-2] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-2] from 'world' to 'panda_link0'
+[robot_state_publisher-1] [WARN] [1783269428.894826960] [kdl_parser]: The root link panda_link0 has an inertia specified in the URDF, but KDL does not support a root link with an inertia.  As a workaround, you can add an extra dummy link to your URDF.
+[robot_state_publisher-1] [INFO] [1783269428.896497145] [robot_state_publisher]: Robot initialized
+[INFO] [ros2-5]: process started with pid [6360]
+[joint_state_publisher-3] [INFO] [1783269440.037494840] [joint_state_publisher]: Waiting for robot_description to be published on the robot_description topic...
+[joint_state_publisher-3] [INFO] [1783269441.060160892] [joint_state_publisher]: Got description, configuring robot
+[execution_node-4] [INFO] [1783269442.638928110] [execution_node]: ExecutionNode ready
+[execution_node-4]   Planning group : panda_arm
+[execution_node-4]   End-effector   : panda_link8
+[execution_node-4]   Reference frame: panda_link0
+[execution_node-4]   Planner        : RRTConnect
+[execution_node-4]   Mode           : simulation
+[execution_node-4] [INFO] [1783269446.253304789] [moveit_3575989567.moveit.py.cpp_initializer]: Initialize rclcpp
+[execution_node-4] [INFO] [1783269446.253863267] [moveit_3575989567.moveit.py.cpp_initializer]: Initialize node parameters
+[execution_node-4] [INFO] [1783269446.254004064] [moveit_3575989567.moveit.py.cpp_initializer]: Initialize node and executor
+[execution_node-4] [INFO] [1783269446.529847408] [moveit_3575989567.moveit.py.cpp_initializer]: Spin separate thread
+[execution_node-4] [INFO] [1783269446.742086975] [moveit_3575989567.moveit.ros.rdf_loader]: Loaded robot model in 0.208146 seconds
+[execution_node-4] [INFO] [1783269446.743274771] [moveit_3575989567.moveit.core.robot_model]: Loading robot model 'panda'...
+[INFO] [experiment_node-6]: process started with pid [6412]
+[execution_node-4] [WARN] [1783269447.235065857] [kdl_parser]: The root link panda_link0 has an inertia specified in the URDF, but KDL does not support a root link with an inertia.  As a workaround, you can add an extra dummy link to your URDF.
+[execution_node-4] [INFO] [1783269447.237519490] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Joint weights for group 'panda_arm': 1 1 1 1 1 1 1
+[execution_node-4] [INFO] [1783269448.005614103] [moveit_3575989567.moveit.ros.moveit_cpp]: Listening to 'joint_states' for joint states
+[execution_node-4] [WARN] [1783269448.084280006] [moveit_3575989567.moveit.ros.planning_scene_monitor]: The complete state of the robot is not yet known.  Missing virtual_joint
+[execution_node-4] [INFO] [1783269448.108193705] [moveit_3575989567.moveit.ros.current_state_monitor]: Listening to joint states on topic 'joint_states'
+[execution_node-4] [INFO] [1783269448.350627377] [moveit_3575989567.moveit.ros.planning_scene_monitor]: Listening to '/attached_collision_object' for attached collision objects
+[execution_node-4] [INFO] [1783269448.428252608] [moveit_3575989567.moveit.ros.planning_scene_monitor]: Publishing maintained planning scene on 'monitored_planning_scene'
+[execution_node-4] [INFO] [1783269448.430832965] [moveit_3575989567.moveit.ros.planning_scene_monitor]: Starting planning scene monitor
+[execution_node-4] [INFO] [1783269448.446413033] [moveit_3575989567.moveit.ros.planning_scene_monitor]: Listening to '/planning_scene'
+[execution_node-4] [INFO] [1783269448.446989169] [moveit_3575989567.moveit.ros.planning_scene_monitor]: Starting world geometry update monitor for collision objects, attached objects, octomap updates.
+[execution_node-4] [INFO] [1783269448.468558873] [moveit_3575989567.moveit.ros.planning_scene_monitor]: Listening to 'collision_object'
+[execution_node-4] [INFO] [1783269448.487113182] [moveit_3575989567.moveit.ros.planning_scene_monitor]: Listening to 'planning_scene_world' for planning scene world geometry
+[execution_node-4] [WARN] [1783269448.534088001] [moveit_3575989567.moveit.ros.occupancy_map_monitor]: Resolution not specified for Octomap. Assuming resolution = 0.1 instead
+[execution_node-4] [ERROR] [1783269448.534786065] [moveit_3575989567.moveit.ros.occupancy_map_monitor]: No 3D sensor plugin(s) defined for octomap updates
+[execution_node-4] [INFO] [1783269449.029252524] [moveit_3575989567.moveit.ros.planning_pipeline]: Successfully loaded planner 'OMPL'
+[execution_node-4] [INFO] [1783269449.181146822] [moveit_py_execution_1]: Try loading adapter 'default_planning_request_adapters/ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269449.210700999] [moveit_py_execution_1]: Loaded adapter 'default_planning_request_adapters/ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269449.214154665] [moveit_py_execution_1]: Try loading adapter 'default_planning_request_adapters/CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269449.223961856] [moveit_py_execution_1]: Loaded adapter 'default_planning_request_adapters/CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269449.224545441] [moveit_py_execution_1]: Try loading adapter 'default_planning_request_adapters/CheckStartStateCollision'
+[execution_node-4] [INFO] [1783269449.224879223] [moveit_py_execution_1]: Loaded adapter 'default_planning_request_adapters/CheckStartStateCollision'
+[execution_node-4] [INFO] [1783269449.357632403] [moveit_py_execution_1]: Try loading adapter 'default_planning_response_adapters/ValidateSolution'
+[execution_node-4] [INFO] [1783269449.524741082] [moveit_py_execution_1]: Loaded adapter 'default_planning_response_adapters/ValidateSolution'
+[execution_node-4] [INFO] [1783269449.525341180] [moveit_py_execution_1]: Try loading adapter 'default_planning_response_adapters/DisplayMotionPath'
+[execution_node-4] [INFO] [1783269449.551294075] [moveit_py_execution_1]: Loaded adapter 'default_planning_response_adapters/DisplayMotionPath'
+[execution_node-4] [WARN] [1783269449.747713829] [moveit_3575989567.moveit.ros.trajectory_execution_manager]: Parameter '~moveit_controller_manager' is not specified but only one matching plugin was found: 'moveit_simple_controller_manager/MoveItSimpleControllerManager'. Using that one.
+[execution_node-4] [ERROR] [1783269450.403634084] [moveit_3575989567.moveit.plugins.simple_controller_manager]: No controller_names specified.
+[execution_node-4] [INFO] [1783269450.417496022] [moveit_3575989567.moveit.plugins.simple_controller_manager]: Returned 0 controllers in list
+[execution_node-4] [INFO] [1783269450.418188441] [moveit_3575989567.moveit.plugins.simple_controller_manager]: Returned 0 controllers in list
+[execution_node-4] [INFO] [1783269450.446568006] [moveit_3575989567.moveit.ros.trajectory_execution_manager]: Trajectory execution is managing controllers
+[execution_node-4] [INFO] [1783269450.728814217] [execution_node]: MoveItPy initialised successfully
+[ros2-5] publisher: beginning loop
+[ros2-5] publishing #1: sensor_msgs.msg.JointState(header=std_msgs.msg.Header(stamp=builtin_interfaces.msg.Time(sec=0, nanosec=0), frame_id=''), name=['panda_joint1', 'panda_joint2', 'panda_joint3', 'panda_joint4', 'panda_joint5', 'panda_joint6', 'panda_joint7'], position=[0.0, -0.785398, 0.0, -2.356194, 0.0, 1.570796, 0.785398], velocity=[], effort=[])
+[ros2-5] 
+[ros2-5] publishing #2: sensor_msgs.msg.JointState(header=std_msgs.msg.Header(stamp=builtin_interfaces.msg.Time(sec=0, nanosec=0), frame_id=''), name=['panda_joint1', 'panda_joint2', 'panda_joint3', 'panda_joint4', 'panda_joint5', 'panda_joint6', 'panda_joint7'], position=[0.0, -0.785398, 0.0, -2.356194, 0.0, 1.570796, 0.785398], velocity=[], effort=[])
+[ros2-5] 
+[ros2-5] publishing #3: sensor_msgs.msg.JointState(header=std_msgs.msg.Header(stamp=builtin_interfaces.msg.Time(sec=0, nanosec=0), frame_id=''), name=['panda_joint1', 'panda_joint2', 'panda_joint3', 'panda_joint4', 'panda_joint5', 'panda_joint6', 'panda_joint7'], position=[0.0, -0.785398, 0.0, -2.356194, 0.0, 1.570796, 0.785398], velocity=[], effort=[])
+[ros2-5] 
+[ros2-5] publishing #4: sensor_msgs.msg.JointState(header=std_msgs.msg.Header(stamp=builtin_interfaces.msg.Time(sec=0, nanosec=0), frame_id=''), name=['panda_joint1', 'panda_joint2', 'panda_joint3', 'panda_joint4', 'panda_joint5', 'panda_joint6', 'panda_joint7'], position=[0.0, -0.785398, 0.0, -2.356194, 0.0, 1.570796, 0.785398], velocity=[], effort=[])
+[ros2-5] 
+[ros2-5] publishing #5: sensor_msgs.msg.JointState(header=std_msgs.msg.Header(stamp=builtin_interfaces.msg.Time(sec=0, nanosec=0), frame_id=''), name=['panda_joint1', 'panda_joint2', 'panda_joint3', 'panda_joint4', 'panda_joint5', 'panda_joint6', 'panda_joint7'], position=[0.0, -0.785398, 0.0, -2.356194, 0.0, 1.570796, 0.785398], velocity=[], effort=[])
+[ros2-5] 
+[ros2-5] publishing #6: sensor_msgs.msg.JointState(header=std_msgs.msg.Header(stamp=builtin_interfaces.msg.Time(sec=0, nanosec=0), frame_id=''), name=['panda_joint1', 'panda_joint2', 'panda_joint3', 'panda_joint4', 'panda_joint5', 'panda_joint6', 'panda_joint7'], position=[0.0, -0.785398, 0.0, -2.356194, 0.0, 1.570796, 0.785398], velocity=[], effort=[])
+[ros2-5] 
+[ros2-5] publishing #7: sensor_msgs.msg.JointState(header=std_msgs.msg.Header(stamp=builtin_interfaces.msg.Time(sec=0, nanosec=0), frame_id=''), name=['panda_joint1', 'panda_joint2', 'panda_joint3', 'panda_joint4', 'panda_joint5', 'panda_joint6', 'panda_joint7'], position=[0.0, -0.785398, 0.0, -2.356194, 0.0, 1.570796, 0.785398], velocity=[], effort=[])
+[ros2-5] 
+[ros2-5] publishing #8: sensor_msgs.msg.JointState(header=std_msgs.msg.Header(stamp=builtin_interfaces.msg.Time(sec=0, nanosec=0), frame_id=''), name=['panda_joint1', 'panda_joint2', 'panda_joint3', 'panda_joint4', 'panda_joint5', 'panda_joint6', 'panda_joint7'], position=[0.0, -0.785398, 0.0, -2.356194, 0.0, 1.570796, 0.785398], velocity=[], effort=[])
+[ros2-5] 
+[ros2-5] publishing #9: sensor_msgs.msg.JointState(header=std_msgs.msg.Header(stamp=builtin_interfaces.msg.Time(sec=0, nanosec=0), frame_id=''), name=['panda_joint1', 'panda_joint2', 'panda_joint3', 'panda_joint4', 'panda_joint5', 'panda_joint6', 'panda_joint7'], position=[0.0, -0.785398, 0.0, -2.356194, 0.0, 1.570796, 0.785398], velocity=[], effort=[])
+[ros2-5] 
+[ros2-5] publishing #10: sensor_msgs.msg.JointState(header=std_msgs.msg.Header(stamp=builtin_interfaces.msg.Time(sec=0, nanosec=0), frame_id=''), name=['panda_joint1', 'panda_joint2', 'panda_joint3', 'panda_joint4', 'panda_joint5', 'panda_joint6', 'panda_joint7'], position=[0.0, -0.785398, 0.0, -2.356194, 0.0, 1.570796, 0.785398], velocity=[], effort=[])
+[ros2-5] 
+[ros2-5] publishing #11: sensor_msgs.msg.JointState(header=std_msgs.msg.Header(stamp=builtin_interfaces.msg.Time(sec=0, nanosec=0), frame_id=''), name=['panda_joint1', 'panda_joint2', 'panda_joint3', 'panda_joint4', 'panda_joint5', 'panda_joint6', 'panda_joint7'], position=[0.0, -0.785398, 0.0, -2.356194, 0.0, 1.570796, 0.785398], velocity=[], effort=[])
+[ros2-5] 
+[ros2-5] publishing #12: sensor_msgs.msg.JointState(header=std_msgs.msg.Header(stamp=builtin_interfaces.msg.Time(sec=0, nanosec=0), frame_id=''), name=['panda_joint1', 'panda_joint2', 'panda_joint3', 'panda_joint4', 'panda_joint5', 'panda_joint6', 'panda_joint7'], position=[0.0, -0.785398, 0.0, -2.356194, 0.0, 1.570796, 0.785398], velocity=[], effort=[])
+[ros2-5] 
+[ros2-5] publishing #13: sensor_msgs.msg.JointState(header=std_msgs.msg.Header(stamp=builtin_interfaces.msg.Time(sec=0, nanosec=0), frame_id=''), name=['panda_joint1', 'panda_joint2', 'panda_joint3', 'panda_joint4', 'panda_joint5', 'panda_joint6', 'panda_joint7'], position=[0.0, -0.785398, 0.0, -2.356194, 0.0, 1.570796, 0.785398], velocity=[], effort=[])
+[ros2-5] 
+[ros2-5] publishing #14: sensor_msgs.msg.JointState(header=std_msgs.msg.Header(stamp=builtin_interfaces.msg.Time(sec=0, nanosec=0), frame_id=''), name=['panda_joint1', 'panda_joint2', 'panda_joint3', 'panda_joint4', 'panda_joint5', 'panda_joint6', 'panda_joint7'], position=[0.0, -0.785398, 0.0, -2.356194, 0.0, 1.570796, 0.785398], velocity=[], effort=[])
+[ros2-5] 
+[ros2-5] publishing #15: sensor_msgs.msg.JointState(header=std_msgs.msg.Header(stamp=builtin_interfaces.msg.Time(sec=0, nanosec=0), frame_id=''), name=['panda_joint1', 'panda_joint2', 'panda_joint3', 'panda_joint4', 'panda_joint5', 'panda_joint6', 'panda_joint7'], position=[0.0, -0.785398, 0.0, -2.356194, 0.0, 1.570796, 0.785398], velocity=[], effort=[])
+[ros2-5] 
+[ros2-5] publishing #16: sensor_msgs.msg.JointState(header=std_msgs.msg.Header(stamp=builtin_interfaces.msg.Time(sec=0, nanosec=0), frame_id=''), name=['panda_joint1', 'panda_joint2', 'panda_joint3', 'panda_joint4', 'panda_joint5', 'panda_joint6', 'panda_joint7'], position=[0.0, -0.785398, 0.0, -2.356194, 0.0, 1.570796, 0.785398], velocity=[], effort=[])
+[ros2-5] 
+[ros2-5] publishing #17: sensor_msgs.msg.JointState(header=std_msgs.msg.Header(stamp=builtin_interfaces.msg.Time(sec=0, nanosec=0), frame_id=''), name=['panda_joint1', 'panda_joint2', 'panda_joint3', 'panda_joint4', 'panda_joint5', 'panda_joint6', 'panda_joint7'], position=[0.0, -0.785398, 0.0, -2.356194, 0.0, 1.570796, 0.785398], velocity=[], effort=[])
+[ros2-5] 
+[ros2-5] publishing #18: sensor_msgs.msg.JointState(header=std_msgs.msg.Header(stamp=builtin_interfaces.msg.Time(sec=0, nanosec=0), frame_id=''), name=['panda_joint1', 'panda_joint2', 'panda_joint3', 'panda_joint4', 'panda_joint5', 'panda_joint6', 'panda_joint7'], position=[0.0, -0.785398, 0.0, -2.356194, 0.0, 1.570796, 0.785398], velocity=[], effort=[])
+[ros2-5] 
+[ros2-5] publishing #19: sensor_msgs.msg.JointState(header=std_msgs.msg.Header(stamp=builtin_interfaces.msg.Time(sec=0, nanosec=0), frame_id=''), name=['panda_joint1', 'panda_joint2', 'panda_joint3', 'panda_joint4', 'panda_joint5', 'panda_joint6', 'panda_joint7'], position=[0.0, -0.785398, 0.0, -2.356194, 0.0, 1.570796, 0.785398], velocity=[], effort=[])
+[ros2-5] 
+[ros2-5] publishing #20: sensor_msgs.msg.JointState(header=std_msgs.msg.Header(stamp=builtin_interfaces.msg.Time(sec=0, nanosec=0), frame_id=''), name=['panda_joint1', 'panda_joint2', 'panda_joint3', 'panda_joint4', 'panda_joint5', 'panda_joint6', 'panda_joint7'], position=[0.0, -0.785398, 0.0, -2.356194, 0.0, 1.570796, 0.785398], velocity=[], effort=[])
+[ros2-5] 
+[ros2-5] publishing #21: sensor_msgs.msg.JointState(header=std_msgs.msg.Header(stamp=builtin_interfaces.msg.Time(sec=0, nanosec=0), frame_id=''), name=['panda_joint1', 'panda_joint2', 'panda_joint3', 'panda_joint4', 'panda_joint5', 'panda_joint6', 'panda_joint7'], position=[0.0, -0.785398, 0.0, -2.356194, 0.0, 1.570796, 0.785398], velocity=[], effort=[])
+[ros2-5] 
+[ros2-5] publishing #22: sensor_msgs.msg.JointState(header=std_msgs.msg.Header(stamp=builtin_interfaces.msg.Time(sec=0, nanosec=0), frame_id=''), name=['panda_joint1', 'panda_joint2', 'panda_joint3', 'panda_joint4', 'panda_joint5', 'panda_joint6', 'panda_joint7'], position=[0.0, -0.785398, 0.0, -2.356194, 0.0, 1.570796, 0.785398], velocity=[], effort=[])
+[ros2-5] 
+[ros2-5] publishing #23: sensor_msgs.msg.JointState(header=std_msgs.msg.Header(stamp=builtin_interfaces.msg.Time(sec=0, nanosec=0), frame_id=''), name=['panda_joint1', 'panda_joint2', 'panda_joint3', 'panda_joint4', 'panda_joint5', 'panda_joint6', 'panda_joint7'], position=[0.0, -0.785398, 0.0, -2.356194, 0.0, 1.570796, 0.785398], velocity=[], effort=[])
+[ros2-5] 
+[ros2-5] publishing #24: sensor_msgs.msg.JointState(header=std_msgs.msg.Header(stamp=builtin_interfaces.msg.Time(sec=0, nanosec=0), frame_id=''), name=['panda_joint1', 'panda_joint2', 'panda_joint3', 'panda_joint4', 'panda_joint5', 'panda_joint6', 'panda_joint7'], position=[0.0, -0.785398, 0.0, -2.356194, 0.0, 1.570796, 0.785398], velocity=[], effort=[])
+[ros2-5] 
+[ros2-5] publishing #25: sensor_msgs.msg.JointState(header=std_msgs.msg.Header(stamp=builtin_interfaces.msg.Time(sec=0, nanosec=0), frame_id=''), name=['panda_joint1', 'panda_joint2', 'panda_joint3', 'panda_joint4', 'panda_joint5', 'panda_joint6', 'panda_joint7'], position=[0.0, -0.785398, 0.0, -2.356194, 0.0, 1.570796, 0.785398], velocity=[], effort=[])
+[ros2-5] 
+[INFO] [ros2-5]: process has finished cleanly [pid 6360]
+[robot_state_publisher-1] [WARN] [1783269471.055670894] [robot_state_publisher]: Moved backwards in time, re-publishing joint transforms!
+[experiment_node-6] /home/ubuntu/.local/lib/python3.12/site-packages/pandas/core/computation/expressions.py:22: UserWarning: Pandas requires version '2.10.2' or newer of 'numexpr' (version '2.9.0' currently installed).
+[experiment_node-6]   from pandas.core.computation.check import NUMEXPR_INSTALLED
+[experiment_node-6] /home/ubuntu/.local/lib/python3.12/site-packages/pandas/core/arrays/masked.py:56: UserWarning: Pandas requires version '1.4.2' or newer of 'bottleneck' (version '1.3.5' currently installed).
+[experiment_node-6]   from pandas.core import (
+[experiment_node-6] [INFO] [1783269491.711112635] [experiment_node]: ExperimentNode initialized
+[experiment_node-6]   Motion mode : MoveIt2 planner-based (no direct IK)
+[experiment_node-6]   Max retries : 2
+[experiment_node-6] [INFO] [1783269491.781233708] [experiment_node]: cube_center overridden: [0.1787, 0.0, 0.1277]
+[experiment_node-6] [INFO] [1783269491.794620121] [experiment_node]: cube_size_mm overridden: 40.86
+[experiment_node-6] [INFO] [1783269491.807765282] [experiment_node]: workspace_bounds overridden: {'x': [0.1481, 0.2093], 'y': [-0.0306, 0.0306], 'z': [0.0971, 0.1583]}
+[experiment_node-6] [INFO] [1783269492.291700583] [experiment_node]: Waiting for /move_to_pose action server...
+[experiment_node-6] [INFO] [1783269492.311776408] [experiment_node]: Run metadata → /home/ubuntu/autocert_data/experiments/panda_test_009_run_metadata.json
+[experiment_node-6] [INFO] [1783269492.339115884] [experiment_node]: 
+[experiment_node-6] =======================================================
+[experiment_node-6] Pose 1/5  Target: (0.1787, 0.0000, 0.1277)
+[experiment_node-6] [INFO] [1783269492.361438980] [experiment_node]:   Rep 1/5
+[execution_node-4] [INFO] [1783269492.507424546] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269492.566794596] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269492.570422907] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269492.570980901] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269492.575258240] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269492.747070152] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269493.111284792] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269493.112743231] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269493.113544685] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269493.118671904] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269493.279318048] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269493.312922933] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269493.313624103] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269493.313991606] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269493.325684757] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[experiment_node-6] [INFO] [1783269493.412065164] [experiment_node]:   Rep 2/5
+[execution_node-4] [INFO] [1783269493.478657419] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269493.517027481] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269493.517994387] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269493.518420660] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269493.520255682] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269493.698765836] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269493.717198036] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269493.717777014] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269493.718019398] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269493.719572239] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269493.845327043] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269493.863724424] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269493.864877027] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269493.865192879] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269493.866717432] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[experiment_node-6] [INFO] [1783269493.932826153] [experiment_node]:   Rep 3/5
+[execution_node-4] [INFO] [1783269494.007676263] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269494.026808577] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269494.027808451] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269494.028543791] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269494.029845326] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269494.175183415] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269494.200787995] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269494.201483068] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269494.201681750] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269494.202613527] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269494.333224383] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269494.351143707] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269494.358158797] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269494.359182406] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269494.362157978] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[experiment_node-6] [INFO] [1783269494.426099434] [experiment_node]:   Rep 4/5
+[execution_node-4] [INFO] [1783269494.503463992] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269494.538953637] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269494.539714907] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269494.540059009] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269494.540989770] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269494.630827102] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269494.651004729] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269494.652059755] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269494.652498647] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269494.654016340] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269494.740384366] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269494.774279315] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269494.774922599] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269494.775352295] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269494.786530716] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[experiment_node-6] [INFO] [1783269494.863541556] [experiment_node]:   Rep 5/5
+[execution_node-4] [INFO] [1783269494.923647251] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269494.960859424] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269494.961754439] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269494.961995736] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269494.962912444] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269495.054971655] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269495.093815123] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269495.094664195] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269495.094956176] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269495.096626187] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269495.181151870] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269495.214489569] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269495.215351223] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269495.215735552] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269495.217336775] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[experiment_node-6] [INFO] [1783269495.269707448] [experiment_node]:   Pose 0: 0/5 valid reps  retries=10
+[experiment_node-6] [INFO] [1783269495.283702639] [experiment_node]: 
+[experiment_node-6] =======================================================
+[experiment_node-6] Pose 2/5  Target: (0.1991, 0.0000, 0.1277)
+[experiment_node-6] [INFO] [1783269495.298752273] [experiment_node]:   Rep 1/5
+[execution_node-4] [INFO] [1783269495.340545143] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269495.615705264] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269495.621443359] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269495.621838573] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269495.633099792] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269495.775496917] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269495.820385184] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269495.821218085] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269495.821611327] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269495.823641121] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269495.970073791] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269496.003826874] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269496.005127959] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269496.005738686] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269496.007267556] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[experiment_node-6] [INFO] [1783269496.070589521] [experiment_node]:   Rep 2/5
+[execution_node-4] [INFO] [1783269496.143540585] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269496.166653320] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269496.168691016] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269496.169580257] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269496.170684737] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269496.291147062] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269496.325617978] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269496.326526210] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269496.330733254] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269496.335764466] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269496.447799988] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269496.488860839] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269496.489854468] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269496.490170668] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269496.491592956] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[experiment_node-6] [INFO] [1783269496.566212030] [experiment_node]:   Rep 3/5
+[execution_node-4] [INFO] [1783269496.631071762] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269496.646822970] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269496.647689469] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269496.648551678] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269496.649640574] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269496.834289152] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269496.898524108] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269496.899341047] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269496.899652113] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269496.900950800] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269497.054612079] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269497.130833817] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269497.131685450] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269497.132480576] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269497.133619560] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[experiment_node-6] [INFO] [1783269497.234653920] [experiment_node]:   Rep 4/5
+[execution_node-4] [INFO] [1783269497.358312335] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269497.414349160] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269497.415009401] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269497.415398712] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269497.425763015] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269497.688787868] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269497.752429749] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269497.753507519] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269497.753977466] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269497.755035102] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269497.935504416] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269498.058716841] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269498.059386364] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269498.059591798] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269498.071292348] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[experiment_node-6] [INFO] [1783269498.269586368] [experiment_node]:   Rep 5/5
+[execution_node-4] [INFO] [1783269498.429517278] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269498.655345112] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269498.656408530] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269498.656681453] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269498.657961480] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269498.853391187] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269498.920616742] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269498.921779708] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269498.922121861] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269498.923961048] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269499.162194308] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269499.196625519] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269499.197537513] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269499.197961610] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269499.199199447] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[experiment_node-6] [INFO] [1783269499.378383001] [experiment_node]:   Pose 1: 0/5 valid reps  retries=10
+[experiment_node-6] [INFO] [1783269499.430443589] [experiment_node]: 
+[experiment_node-6] =======================================================
+[experiment_node-6] Pose 3/5  Target: (0.1583, 0.0000, 0.1277)
+[experiment_node-6] [INFO] [1783269499.492898915] [experiment_node]:   Rep 1/5
+[execution_node-4] [INFO] [1783269499.606562800] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269499.644872993] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269499.645921853] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269499.646284683] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269499.654896774] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269499.975286051] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269500.049212464] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269500.050067275] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269500.050377806] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269500.051722386] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269500.260663809] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269500.310736734] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269500.311742939] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269500.312647275] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269500.314504995] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[experiment_node-6] [INFO] [1783269500.468449982] [experiment_node]:   Rep 2/5
+[execution_node-4] [INFO] [1783269500.569505788] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269500.628364566] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269500.629300959] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269500.629609200] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269500.630893075] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269500.864214292] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269500.912832649] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269500.913965149] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269500.914490904] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269500.915548974] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[robot_state_publisher-1] [WARN] [1783269500.994839203] [robot_state_publisher]: Moved backwards in time, re-publishing joint transforms!
+[execution_node-4] [INFO] [1783269501.057760192] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269501.099710138] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269501.100910516] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269501.101256099] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269501.102696317] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[experiment_node-6] [INFO] [1783269501.247999037] [experiment_node]:   Rep 3/5
+[execution_node-4] [INFO] [1783269501.410160579] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269501.485457873] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269501.487022573] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269501.487712374] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269501.499494122] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269501.692993782] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269501.739505036] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269501.740704234] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269501.741093476] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269501.745051835] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269501.991571096] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269502.020389684] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269502.023457587] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269502.028122638] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269502.029823077] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[experiment_node-6] [INFO] [1783269502.148133206] [experiment_node]:   Rep 4/5
+[execution_node-4] [INFO] [1783269502.223708069] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269502.301732871] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269502.302976618] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269502.303678329] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269502.305022278] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269502.485171155] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269502.997454732] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269503.002816750] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269503.003258097] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269503.004507777] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269503.277930112] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269503.492911621] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269503.493848702] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269503.495141924] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269503.501624402] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[experiment_node-6] [INFO] [1783269503.635375029] [experiment_node]:   Rep 5/5
+[execution_node-4] [INFO] [1783269503.783219301] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [ERROR] [1783269504.625595318] [execution_node]: IK Solver failed. Target position is physically unreachable.
+[execution_node-4] [INFO] [1783269505.055387743] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269505.155242569] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269505.156552766] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269505.156895697] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269505.157994589] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269505.415397972] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [ERROR] [1783269506.382015930] [execution_node]: IK Solver failed. Target position is physically unreachable.
+[experiment_node-6] [INFO] [1783269506.559567247] [experiment_node]:   Pose 2: 0/5 valid reps  retries=10
+[experiment_node-6] [INFO] [1783269506.638736700] [experiment_node]: 
+[experiment_node-6] =======================================================
+[experiment_node-6] Pose 4/5  Target: (0.1787, 0.0204, 0.1277)
+[experiment_node-6] [INFO] [1783269506.701330433] [experiment_node]:   Rep 1/5
+[execution_node-4] [INFO] [1783269506.877589034] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269506.915992251] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269506.916647717] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269506.916921257] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269506.925136978] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269507.208715404] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269507.248468841] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269507.249376171] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269507.249651346] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269507.251204025] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269507.496717059] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269507.595376620] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269507.596475006] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269507.596935723] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269507.598088845] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[experiment_node-6] [INFO] [1783269507.748792175] [experiment_node]:   Rep 2/5
+[execution_node-4] [INFO] [1783269507.859411513] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269507.914140218] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269507.915397585] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269507.915710361] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269507.917128146] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269508.114084919] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269508.176442042] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269508.177423316] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269508.177725137] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269508.179294424] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269508.446092388] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269508.543508449] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269508.544360092] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269508.545587077] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269508.559106290] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[experiment_node-6] [INFO] [1783269508.746115808] [experiment_node]:   Rep 3/5
+[execution_node-4] [INFO] [1783269508.920262005] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269509.000573874] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269509.001251827] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269509.001835059] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269509.015976368] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269509.384342586] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269509.436965141] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269509.437905464] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269509.438688496] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269509.440038764] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269509.684507287] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269509.832447026] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269509.833105592] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269509.833402285] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269509.839365006] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[experiment_node-6] [INFO] [1783269510.051007167] [experiment_node]:   Rep 4/5
+[execution_node-4] [INFO] [1783269510.156792048] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269510.476347760] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269510.477114339] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269510.477803032] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269510.492241928] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269510.902070783] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269510.992669045] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269511.003967927] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269511.004456180] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269511.005873109] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269511.396843157] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269511.518949863] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269511.520037943] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269511.520487502] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269511.527366749] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[experiment_node-6] [INFO] [1783269511.741170049] [experiment_node]:   Rep 5/5
+[execution_node-4] [INFO] [1783269511.879497917] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269511.949169636] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269511.949864780] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269511.950182883] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269511.957607690] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269512.201706293] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269512.255554563] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269512.264541375] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269512.264920253] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269512.266422009] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269512.609627310] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269512.753254905] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269512.754566754] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269512.755020136] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269512.756710702] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[experiment_node-6] [INFO] [1783269512.921878123] [experiment_node]:   Pose 3: 0/5 valid reps  retries=10
+[experiment_node-6] [INFO] [1783269512.952036916] [experiment_node]: 
+[experiment_node-6] =======================================================
+[experiment_node-6] Pose 5/5  Target: (0.1787, -0.0204, 0.1277)
+[experiment_node-6] [INFO] [1783269512.988656960] [experiment_node]:   Rep 1/5
+[execution_node-4] [INFO] [1783269513.103267237] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269513.158013426] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269513.159302908] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269513.159744547] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269513.174031786] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269513.377369422] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269513.437991810] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269513.449951491] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269513.450785905] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269513.451990956] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269513.746952156] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269513.888726286] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269513.889375341] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269513.890016545] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269513.891330828] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[experiment_node-6] [INFO] [1783269514.102552834] [experiment_node]:   Rep 2/5
+[execution_node-4] [INFO] [1783269514.252387227] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269514.347290054] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269514.348418965] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269514.348808452] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269514.350055118] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269514.643379257] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269514.725680118] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269514.726913333] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269514.727230422] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269514.728201329] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269515.079984924] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269515.147629311] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269515.149003043] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269515.149465325] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269515.159052464] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[experiment_node-6] [INFO] [1783269515.402764947] [experiment_node]:   Rep 3/5
+[execution_node-4] [INFO] [1783269515.545568626] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269515.582914112] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269515.583729819] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269515.595421462] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269515.597854171] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269515.916092679] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269516.055784477] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269516.056482736] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269516.056754827] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269516.085254107] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269516.315659062] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269516.479926831] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269516.481044234] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269516.481473782] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269516.483032930] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[experiment_node-6] [INFO] [1783269516.647087079] [experiment_node]:   Rep 4/5
+[execution_node-4] [INFO] [1783269516.780378494] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269516.841729087] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269516.842742423] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269516.843297810] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269516.844324171] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269517.056283932] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [ERROR] [1783269517.781984088] [execution_node]: IK Solver failed. Target position is physically unreachable.
+[execution_node-4] [INFO] [1783269518.155930024] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269518.223869356] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269518.224747957] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269518.225089119] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269518.238638050] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[experiment_node-6] [INFO] [1783269518.512296785] [experiment_node]:   Rep 5/5
+[execution_node-4] [INFO] [1783269518.632372947] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269518.706207304] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269518.707158764] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269518.707588121] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269518.709009746] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269518.969900607] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269519.015409347] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269519.016318240] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269519.016941418] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269519.018014818] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[execution_node-4] [INFO] [1783269519.334190131] [moveit_3575989567.moveit.kinematics.kdl_kinematics_plugin]: Using position only ik
+[execution_node-4] [INFO] [1783269519.425894004] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'
+[execution_node-4] [INFO] [1783269519.427313506] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateBounds'
+[execution_node-4] [INFO] [1783269519.427786214] [moveit_py_execution_1]: Calling PlanningRequestAdapter 'CheckStartStateCollision'
+[execution_node-4] [ERROR] [1783269519.428858833] [moveit_py_execution_1]: PlanningRequestAdapter 'CheckStartStateCollision' failed, because '2 contact(s) detected : panda_hand - panda_link5, panda_link5 - panda_link7, '. Aborting planning pipeline.
+[experiment_node-6] [INFO] [1783269519.597267466] [experiment_node]:   Pose 4: 0/5 valid reps  retries=10
+[experiment_node-6] [INFO] [1783269519.719649286] [experiment_node]: Joint utilization → /home/ubuntu/autocert_data/experiments/panda_test_009_joint_utilization.json
+[experiment_node-6] [INFO] [1783269519.767970509] [experiment_node]: 
+[experiment_node-6] =======================================================
+[experiment_node-6] EXPERIMENT COMPLETE
+[experiment_node-6]   Run ID          : panda_test_009
+[experiment_node-6]   Output          : /home/ubuntu/autocert_data/experiments/panda_test_009.csv
+[INFO] [experiment_node-6]: process has finished cleanly [pid 6412]
+[INFO] [launch.user]: experiment_node finished — starting evaluation for panda_test_009
+[INFO] [evaluation_node-7]: process started with pid [6607]
+[evaluation_node-7] /home/ubuntu/.local/lib/python3.12/site-packages/pandas/core/computation/expressions.py:22: UserWarning: Pandas requires version '2.10.2' or newer of 'numexpr' (version '2.9.0' currently installed).
+[evaluation_node-7]   from pandas.core.computation.check import NUMEXPR_INSTALLED
+[evaluation_node-7] /home/ubuntu/.local/lib/python3.12/site-packages/pandas/core/arrays/masked.py:56: UserWarning: Pandas requires version '1.4.2' or newer of 'bottleneck' (version '1.3.5' currently installed).
+[evaluation_node-7]   from pandas.core import (
+[evaluation_node-7] [INFO] [1783269548.535540454] [evaluation_node]: Evaluation Node Initialized
+[evaluation_node-7] [INFO] [1783269548.549952936] [evaluation_node]: Loading data from: /home/ubuntu/autocert_data/experiments/panda_test_009.csv
+[evaluation_node-7] [ERROR] [1783269548.686099382] [evaluation_node]: No measurement rows in /home/ubuntu/autocert_data/experiments/panda_test_009.csv — every rep of every pose failed to produce a measurement (check execution_node's log for planning/collision failures). Nothing to evaluate.
+[INFO] [evaluation_node-7]: process has finished cleanly [pid 6607]
+[INFO] [launch.user]: evaluation_node finished for panda_test_009 — shutting down launch, certification runs next
+[INFO] [execution_node-4]: sending signal 'SIGINT' to process[execution_node-4]
+[INFO] [joint_state_publisher-3]: sending signal 'SIGINT' to process[joint_state_publisher-3]
+[INFO] [static_transform_publisher-2]: sending signal 'SIGINT' to process[static_transform_publisher-2]
+[INFO] [robot_state_publisher-1]: sending signal 'SIGINT' to process[robot_state_publisher-1]
+[execution_node-4] [INFO] [1783269551.375478722] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[static_transform_publisher-2] [INFO] [1783269551.408955216] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[robot_state_publisher-1] [INFO] [1783269551.434644323] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [static_transform_publisher-2]: process has finished cleanly [pid 6281]
+[INFO] [robot_state_publisher-1]: process has finished cleanly [pid 6280]
+[execution_node-4] [INFO] [1783269552.082726546] [moveit_3575989567.moveit.ros.moveit_cpp]: Deleting MoveItCpp
+[execution_node-4] [INFO] [1783269552.330826410] [moveit_3575989567.moveit.ros.planning_scene_monitor]: Stopped publishing maintained planning scene.
+[execution_node-4] [INFO] [1783269552.371649766] [moveit_3575989567.moveit.ros.planning_scene_monitor]: Stopping world geometry monitor
+[execution_node-4] [INFO] [1783269552.385845058] [moveit_3575989567.moveit.ros.planning_scene_monitor]: Stopping planning scene monitor
+[INFO] [joint_state_publisher-3]: process has finished cleanly [pid 6282]
+[INFO] [execution_node-4]: process has finished cleanly [pid 6283]
+ERROR: expected evaluation output not found: /home/ubuntu/autocert_data/experiments/panda_test_009_evaluation.json
+       experiment_node or evaluation_node likely failed — check the log above.
+$ 
+
+Script done on 2026-07-05 16:39:28+00:00 [COMMAND_EXIT_CODE="1"]

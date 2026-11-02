@@ -1,0 +1,12 @@
+# Request: Generate workspace samples
+string sampling_strategy        # "random", "latin", "halton", "grid"
+int32 num_samples               # Number of samples to generate
+float64[] seed_configuration    # Optional seed configuration
+bool enable_collision_checking  # Whether to check collisions
+---
+# Response: Generated workspace data
+float64[] joint_samples          # Flattened joint samples
+geometry_msgs/Pose[] poses       # Corresponding end-effector poses
+int32[] valid_indices            # Indices of collision-free samples
+float64 reachability_index       # Percentage of reachable configurations
+float64 workspace_volume         # Estimated workspace volume (if computed)

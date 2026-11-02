@@ -1,0 +1,119 @@
+{
+    "metadata": {
+        "certificate_id": "AC-RUN_045",
+        "issue_date": "2026-03-23",
+        "valid_until": "2027-03-23",
+        "standard": "ISO 9283:1998",
+        "laboratory": "AutoCert Automated Lab",
+        "technician": "AutoCert System",
+        "dataset_hash": "SIM_VALIDATED",
+        "robot_model_hash": "OMX_6DOF",
+        "srdf_hash": "N/A",
+        "controller_version": "ROS2_JAZZY",
+        "issues": [
+            "Max accuracy 29.107mm exceeds limit 1.000mm"
+        ]
+    },
+    "robot": {
+        "manufacturer": "Universal Robots",
+        "model": "UR5e",
+        "serial_number": "2023-UR5e-001",
+        "software_version": "5.12",
+        "payload_kg": 5.0,
+        "reach_m": 0.85
+    },
+    "test_conditions": {
+        "ambient_temperature_c": 22.0,
+        "relative_humidity_percent": 45.0,
+        "measurement_system": "Gazebo TF Stream",
+        "measurement_system_calibration_date": "2026-03-23",
+        "test_cube_size_mm": 60.0,
+        "test_cube_center": [
+            0.2,
+            0.0,
+            0.22
+        ],
+        "repetitions_per_pose": 5,
+        "outlier_threshold": 3.0,
+        "confidence_level": 0.95,
+        "pose_strategy": "iso_cube"
+    },
+    "pose_results": [
+        {
+            "pose_id": 0,
+            "pose_label": "P0",
+            "accuracy_mm": 11.05480171720612,
+            "repeatability_mm": 2.5549800474174553e-10,
+            "accuracy_x_mm": 0.902786545802392,
+            "accuracy_y_mm": -7.829351222678058,
+            "accuracy_z_mm": -7.752088550281866,
+            "orientation_error_deg": 0.0,
+            "orientation_repeatability_deg": 0.0,
+            "num_samples": 5,
+            "outliers_removed": 0
+        },
+        {
+            "pose_id": 1,
+            "pose_label": "P1",
+            "accuracy_mm": 16.488814785326706,
+            "repeatability_mm": 1.1279523792943038e-10,
+            "accuracy_x_mm": 12.790162075894147,
+            "accuracy_y_mm": -10.1368579686749,
+            "accuracy_z_mm": -2.353057079647669,
+            "orientation_error_deg": 0.0,
+            "orientation_repeatability_deg": 0.0,
+            "num_samples": 5,
+            "outliers_removed": 0
+        },
+        {
+            "pose_id": 2,
+            "pose_label": "P2",
+            "accuracy_mm": 29.10741941198885,
+            "repeatability_mm": 2.4821087203877595e-11,
+            "accuracy_x_mm": 17.67234263570927,
+            "accuracy_y_mm": -14.252707379264601,
+            "accuracy_z_mm": -18.215117429008636,
+            "orientation_error_deg": 0.0,
+            "orientation_repeatability_deg": 0.0,
+            "num_samples": 5,
+            "outliers_removed": 0
+        },
+        {
+            "pose_id": 3,
+            "pose_label": "P3",
+            "accuracy_mm": 28.907823110885268,
+            "repeatability_mm": 1.8278236709439363e-09,
+            "accuracy_x_mm": 3.281413183924525,
+            "accuracy_y_mm": -20.528398448373263,
+            "accuracy_z_mm": -20.086797197946343,
+            "orientation_error_deg": 0.0,
+            "orientation_repeatability_deg": 0.0,
+            "num_samples": 5,
+            "outliers_removed": 0
+        },
+        {
+            "pose_id": 4,
+            "pose_label": "P4",
+            "accuracy_mm": 13.501581818649862,
+            "repeatability_mm": 1.1736162724209548e-10,
+            "accuracy_x_mm": -2.925675136600442,
+            "accuracy_y_mm": 13.136393012515263,
+            "accuracy_z_mm": 1.0808863129463109,
+            "orientation_error_deg": 0.0,
+            "orientation_repeatability_deg": 0.0,
+            "num_samples": 5,
+            "outliers_removed": 0
+        }
+    ],
+    "overall": {
+        "mean_accuracy_mm": 19.812088168811364,
+        "max_accuracy_mm": 29.10741941198885,
+        "mean_repeatability_mm": 4.67659925612217e-10,
+        "max_repeatability_mm": 1.8278236709439363e-09,
+        "mean_orientation_accuracy_deg": 0.0,
+        "mean_orientation_repeatability_deg": 0.0,
+        "accuracy_95_confidence_mm": 0.05,
+        "repeatability_95_confidence_mm": 0.02,
+        "certification_status": "FAIL"
+    }
+}

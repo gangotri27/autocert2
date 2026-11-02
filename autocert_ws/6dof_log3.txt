@@ -1,0 +1,21 @@
+Script started on 2026-07-06 16:40:59+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+$ ./run_autocert_pipeline.sh   urdf_file:=/home/ubuntu/new_ws/src/open_manipulator/open_manipulator_description/urdf/open_manipulator_x/open_manipulator_x.urdf.xacro   srdf_file:=/home/ubuntu/new_ws/src/open_manipulator/open_manipulator_moveit_config/config/open_manipulator_x/open_manipulator_x.srdf   planning_group:=arm end_effector_link:=end_effector_link reference_frame:=link1   planner_id:=RRTConnect planning_time:=5.0 run_id:=run_3001 robot_mode:=simulation
+============================================================
+ AutoCert pipeline — run_id: run_3001
+ Stage 1/2 (ros2 launch): experiment_node -> evaluation_node
+============================================================
+[INFO] [launch]: All log files can be found below /home/ubuntu/.ros/log/2026-07-06-16-41-39-323697-c182b1819e36-3715
+[INFO] [launch]: Default logging verbosity is set to INFO
+[ERROR] [launch]: Caught exception in launch (see debug for traceback): Invalid parameter "use_mock_hardware"
+$ cat /home/ubuntu/.ros/log/2026-07-06-16-41-39-323697-c182b1819e36-3715/launch.log | grep -B5 -A30 "use_mock_hardware"
+1783356099.3298328 [INFO] [launch]: All log files can be found below /home/ubuntu/.ros/log/2026-07-06-16-41-39-323697-c182b1819e36-3715
+1783356099.3301799 [INFO] [launch]: Default logging verbosity is set to INFO
+1783356099.5258543 [ERROR] [launch]: Caught exception in launch (see debug for traceback): Invalid parameter "use_mock_hardware"
+$ tail -150 /home/ubuntu/.ros/log/2026-07-06-16-41-39-323697-c182b1819e36-3715/launch.log
+1783356099.3298328 [INFO] [launch]: All log files can be found below /home/ubuntu/.ros/log/2026-07-06-16-41-39-323697-c182b1819e36-3715
+1783356099.3301799 [INFO] [launch]: Default logging verbosity is set to INFO
+1783356099.5258543 [ERROR] [launch]: Caught exception in launch (see debug for traceback): Invalid parameter "use_mock_hardware"
+$ ^C
+$ 
+
+Script done on 2026-07-06 17:58:46+00:00 [COMMAND_EXIT_CODE="130"]

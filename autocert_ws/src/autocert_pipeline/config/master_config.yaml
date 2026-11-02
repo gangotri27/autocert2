@@ -1,0 +1,17 @@
+# Master configuration for AutoCert pipeline
+
+# Results storage
+results_dir: ~/autocert_data
+
+# Robot configuration
+robot_name: ur5e
+robot_metadata_file: ~/autocert_ws/src/autocert_certification/config/robot_metadata.yaml
+
+# Specification limits
+limits_file: ~/autocert_ws/src/autocert_certification/config/limits.yaml
+
+# Experiment configuration
+experiment_config: ~/autocert_ws/src/autocert_experiment/config/experiment_config.yaml
+
+# Evaluation configuration
+evaluation_config: ~/autocert_ws/src/autocert_evaluation/config/evaluation_config.yaml

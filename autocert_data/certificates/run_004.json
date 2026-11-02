@@ -1,0 +1,119 @@
+{
+    "metadata": {
+        "certificate_id": "AC-RUN_001",
+        "issue_date": "2026-04-08",
+        "valid_until": "2027-04-08",
+        "standard": "ISO 9283:1998",
+        "laboratory": "AutoCert Lab",
+        "technician": "AutoCert System",
+        "dataset_hash": "SIM_VALIDATED",
+        "robot_model_hash": "OMX_6DOF",
+        "srdf_hash": "N/A",
+        "controller_version": "ROS2_JAZZY",
+        "issues": [
+            "Max repeatability 0.145mm exceeds limit 0.100mm"
+        ]
+    },
+    "robot": {
+        "manufacturer": "ROBOTIS",
+        "model": "OMX-6DOF-R1",
+        "serial_number": "OMX-DEMO-001",
+        "software_version": "1.0",
+        "payload_kg": 0.3,
+        "reach_m": 0.37
+    },
+    "test_conditions": {
+        "ambient_temperature_c": 22.5,
+        "relative_humidity_percent": 45,
+        "measurement_system": "Leica AT960",
+        "measurement_system_calibration_date": "2024-01-15",
+        "test_cube_size_mm": 50.0,
+        "test_cube_center": [
+            0.2,
+            0.0,
+            0.22
+        ],
+        "repetitions_per_pose": 5,
+        "outlier_threshold": 3.0,
+        "confidence_level": 0.95,
+        "pose_strategy": "iso_cube"
+    },
+    "pose_results": [
+        {
+            "pose_id": 0,
+            "pose_label": "P0",
+            "accuracy_mm": 0.234,
+            "repeatability_mm": 0.067,
+            "accuracy_x_mm": -0.0002,
+            "accuracy_y_mm": 0.0001,
+            "accuracy_z_mm": -0.0001,
+            "orientation_error_deg": 0.256,
+            "orientation_repeatability_deg": 0.045,
+            "num_samples": 5,
+            "outliers_removed": 0
+        },
+        {
+            "pose_id": 1,
+            "pose_label": "P1",
+            "accuracy_mm": 0.567,
+            "repeatability_mm": 0.089,
+            "accuracy_x_mm": -0.0005,
+            "accuracy_y_mm": -0.0002,
+            "accuracy_z_mm": -0.0002,
+            "orientation_error_deg": 0.412,
+            "orientation_repeatability_deg": 0.067,
+            "num_samples": 5,
+            "outliers_removed": 0
+        },
+        {
+            "pose_id": 2,
+            "pose_label": "P2",
+            "accuracy_mm": 0.789,
+            "repeatability_mm": 0.112,
+            "accuracy_x_mm": -0.0007,
+            "accuracy_y_mm": 0.0003,
+            "accuracy_z_mm": -0.0003,
+            "orientation_error_deg": 0.523,
+            "orientation_repeatability_deg": 0.089,
+            "num_samples": 5,
+            "outliers_removed": 0
+        },
+        {
+            "pose_id": 3,
+            "pose_label": "P3",
+            "accuracy_mm": 0.345,
+            "repeatability_mm": 0.078,
+            "accuracy_x_mm": 0.0001,
+            "accuracy_y_mm": -0.0002,
+            "accuracy_z_mm": -0.0001,
+            "orientation_error_deg": 0.298,
+            "orientation_repeatability_deg": 0.056,
+            "num_samples": 5,
+            "outliers_removed": 0
+        },
+        {
+            "pose_id": 4,
+            "pose_label": "P4",
+            "accuracy_mm": 0.421,
+            "repeatability_mm": 0.095,
+            "accuracy_x_mm": -0.0001,
+            "accuracy_y_mm": 0.0003,
+            "accuracy_z_mm": -0.0002,
+            "orientation_error_deg": 0.367,
+            "orientation_repeatability_deg": 0.071,
+            "num_samples": 5,
+            "outliers_removed": 0
+        }
+    ],
+    "overall": {
+        "mean_accuracy_mm": 0.456,
+        "max_accuracy_mm": 0.789,
+        "mean_repeatability_mm": 0.089,
+        "max_repeatability_mm": 0.145,
+        "mean_orientation_accuracy_deg": 0.342,
+        "mean_orientation_repeatability_deg": 0.078,
+        "accuracy_95_confidence_mm": 0.05,
+        "repeatability_95_confidence_mm": 0.02,
+        "certification_status": "FAIL"
+    }
+}

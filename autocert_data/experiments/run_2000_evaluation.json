@@ -1,0 +1,66 @@
+{
+    "run_id": "run_2000",
+    "timestamp": "2026-07-03T14:16:26.650867",
+    "test_standard": "ISO 9283",
+    "overall": {
+        "overall_mean_accuracy_mm": 0.47513228701373506,
+        "overall_max_accuracy_mm": 0.6805865266331714,
+        "overall_mean_repeatability_mm": 1.8284608796609274,
+        "overall_max_repeatability_mm": 2.407178409518105,
+        "overall_mean_orientation_accuracy_deg": 0.531409821304635,
+        "overall_mean_orientation_repeatability_deg": 1.3717547780374324,
+        "num_poses": 5
+    },
+    "poses": {
+        "0": {
+            "ap_distance_mm": 0.2763231762375093,
+            "rp_distance_mm": 0.8542740288216225,
+            "ao_deg": 1.004780102320657,
+            "ro_deg": 1.4567145361472345,
+            "mean_x": 0.20022692199762088,
+            "mean_y": -1.9488564000135546e-05,
+            "mean_z": 0.22015646437484282,
+            "num_samples": 5
+        },
+        "1": {
+            "ap_distance_mm": 0.4763581455404775,
+            "rp_distance_mm": 2.0650288760927356,
+            "ao_deg": 0.3128464407040248,
+            "ro_deg": 1.299567899841589,
+            "mean_x": 0.2127810396400535,
+            "mean_y": -0.00035559495051328005,
+            "mean_z": 0.21985341884599027,
+            "num_samples": 5
+        },
+        "2": {
+            "ap_distance_mm": 0.543422487605519,
+            "rp_distance_mm": 2.407178409518105,
+            "ao_deg": 0.48977738505058144,
+            "ro_deg": 1.2289767516755599,
+            "mean_x": 0.18720584450817926,
+            "mean_y": 9.875939625084e-05,
+            "mean_z": 0.21955387543407784,
+            "num_samples": 5
+        },
+        "3": {
+            "ap_distance_mm": 0.39897109905199796,
+            "rp_distance_mm": 1.9079395566394382,
+            "ao_deg": 0.4412318994275308,
+            "ro_deg": 1.8894080179157982,
+            "mean_x": 0.20007083758305635,
+            "mean_y": 0.012805522184545582,
+            "mean_z": 0.21975339065415928,
+            "num_samples": 5
+        },
+        "4": {
+            "ap_distance_mm": 0.6805865266331714,
+            "rp_distance_mm": 1.9078835272327344,
+            "ao_deg": 0.4084132790203808,
+            "ro_deg": 0.9841066846069804,
+            "mean_x": 0.20028702943702278,
+            "mean_y": -0.01262938626927412,
+            "mean_z": 0.2193966167753075,
+            "num_samples": 5
+        }
+    }
+}

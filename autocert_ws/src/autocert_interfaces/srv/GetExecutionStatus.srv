@@ -1,0 +1,6 @@
+---
+bool is_executing
+bool is_ready
+string current_state
+string planning_group
+string end_effector_link

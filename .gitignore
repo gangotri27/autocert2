@@ -1,0 +1,8 @@
+/autocert_ws/build/
+/autocert_ws/install/
+/autocert_ws/log/
+/ur_gz_ws/build/
+/ur_gz_ws/install/
+/ur_gz_ws/log/
+__pycache__/
+*.pyc

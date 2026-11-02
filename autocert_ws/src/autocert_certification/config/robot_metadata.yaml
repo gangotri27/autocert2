@@ -1,0 +1,78 @@
+manufacturer: "ROBOTIS"
+model: "OMX-6DOF-R1"
+serial_number: "OMX-DEMO-001"
+software_version: "1.0"
+subtitle: "6-DOF Upgraded Edition"
+safety_rating: "Uncertified (Research use only)"
+repo_url: "https://github.com/KMTI-ROBOPARADIGM/omx-wrist-roll-original"
+repo_url_short: "github.com/KMTI-ROBOPARADIGM/omx-wrist-roll-original"
+payload_kg: 0.3
+reach_m: 0.485
+weight_kg: 0.63
+material: "High-strength polymer (PLA) + metal fasteners"
+dof: 6
+max_tcp_speed: 0.3
+max_joint_speed: 275
+input_voltage: "12 V DC"
+power_consumption: "35 W"
+max_power: "120 W"
+communication: "TTL Multi-Drop Bus"
+ip_rating: "IP20"
+noise_db: "< 60 dB(A)"
+footprint: "Ø150 mm"
+cable_length: "1 m"
+company: "KMTI RoboParadigm Lab"
+phone: "+91-9876543210"
+email: "research@domain.edu"
+website: "www.autocert.com"
+country: "India"
+
+# ── Certificate-mode fields (used by the "load from YAML" menu option) ──
+# Anything left out here just gets prompted for interactively, or falls
+# back to a sensible default if you're running non-interactively.
+description: "The upgraded OpenManipulator-X features a custom 6-DOF configuration with an integrated wrist-roll joint, enabling full spatial orientation."
+key_features:
+  - "Full 6-DOF spatial orientation capability"
+  - "Native out-of-the-box ROS 2 integration"
+  - "Lightweight, modular, and upgradeable design"
+  - "Built on industrial Dynamixel smart servos"
+modifications:
+  - "Hardware: Added 1 DOF (wrist-roll joint)"
+  - "Actuation: J5 utilizes XL430-W250-T servo"
+  - "Software: Updated URDF & MoveIt kinematics"
+applications:
+  - "Pick-and-place automation testing"
+  - "Algorithm benchmarking & motion planning"
+  - "University robotics education and training"
+mounting_options: "Tabletop or fixed base"
+configuration: "Articulated Manipulator"
+actuator_type: "DYNAMIXEL Smart Servo"
+motor_models: "XM430-W350-T / XL430-W250-T"
+control_mode: "Position / Velocity / Current"
+actuator_communication: "TTL Multi-Drop Bus"
+feedback: "Absolute Contactless Encoder"
+power_supply: "12 V, 5 A adapter"
+digital_io: "Available via external controller"
+operating_temp: "0°C to 45°C"
+humidity_range: "5% to 85% (non-condensing)"
+known_limitations:
+  - "Not suitable for industrial payloads or high-cycle loads"
+  - "Limited stiffness due to 3D-printed PLA structure"
+  - "Accuracy subject to standard Dynamixel gear backlash"
+package_contents:
+  - "6-DOF Robotic Arm & Gripper"
+  - "12V Power Adapter"
+  - "Communication Cable"
+  - "Mounting Hardware"
+  - "Quick start guide / documentation"
+# robot_image / robot_image_2 can be a local file path OR a URL
+robot_image: ""
+robot_image_2: ""
+
+laboratory: "AutoCert Lab"
+technician: "AutoCert System"
+temperature: 22.5
+humidity: 45
+measurement_system: "Leica AT960"
+calibration_date: "2024-01-15"
+cube_size_mm: 50
